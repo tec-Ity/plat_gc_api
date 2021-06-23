@@ -1,20 +1,25 @@
 // 只有总公司管理员以上级别可以创建
+// fetch 出错 暂时没有解决
+
+
 
 api = "https://example.com/api/v1/PdPost";
 
-fetchObj = {
-	methods: "POST",
+axios.post("api", formData, {
 	headers: {
 		"content-type": "application/json",
-		"authorization": "Bear"+" "+accessToken
-	},
-	body: JSON.stringify({"obj": dataObj});	
-}
+		"authorization": "accessToken " + accessToken
+	}
+})
+
+formData.append("file_"+i, image_File);
+formData.append("obj", JSON.stringify({dataObj}));
+
 dataObj = {
 	nome: {required: true, type: String, description: "产品名称"},
 	Nation: {required: true, type: ObjectId, description: "产品所属国家"},
 	code: {required: false, type: String, description: "产品条形码, 可以为空, 如果填写 则公司唯一"},
-	img_urls: {required: false, type: Array[String], description: "产品图片"},
+	// img_urls: {required: false, type: Array[String], description: "产品图片"},	// 文件传输
 	desp: {required: false, type: String, description: "产品描述"},
 	unit: {required: false, type: String, description: "产品单位, 如: 瓶 个 箱 PZ"},
 	Brand: {required: false, type: ObjectId, description: "产品所属品牌"},
