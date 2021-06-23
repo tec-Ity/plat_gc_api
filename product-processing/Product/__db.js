@@ -2,7 +2,7 @@ Pd: {type: ObjectId, ref: 'Pd'},
 Prod: {type: ObjectId, ref: 'Prod'},
 
 attrs: [{
-	ProdAttr: {type: ObjectId, ref: 'ProdAttr'},
+	Attr: {type: ObjectId, ref: 'Attr'},
 	code: String,
 	option: String
 }],
@@ -23,8 +23,8 @@ quantity_alert: Number,
 is_alert: Boolean, // 只读
 
 allow_backorder: Boolean,
-ProductRecords: [{type: ObjectId, ref: 'PtRecord'}],
-ProductBatchs: [{type: ObjectId, ref: 'PtBatch'}],
+Records: [{type: ObjectId, ref: 'Record'}],
+Batchs: [{type: ObjectId, ref: 'Batch'}],
 
 is_sell: Boolean, //只读
 

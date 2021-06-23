@@ -21,8 +21,7 @@ dataObj = {
 	img_url: {required: false, type: String, description: "店铺logo"},
 	price_ship: {required: false, type: Float, description: "店铺的本地运费"}
 	// disable
-	Firm: "为只读",
-	serve_Citas: "查看 shop/serve_Citas 接口"
+	serve_Citas: "查看 shop_serveCitas 接口"
 }
 
 // 返回值

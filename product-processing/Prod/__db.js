@@ -27,7 +27,7 @@ sort: Number,
 is_usable: { type: Boolean, default: false },
 
 is_simple: Boolean,			// 只读 根据 Products 决定
-ProdAttrs: [{type: ObjectId, ref: "ProdAttr"}],
+Attrs: [{type: ObjectId, ref: "Attr"}],
 Products: [{type: ObjectId, ref: 'Product'}],
 
 /* 只读  根据 Products 的price_sale 或 price_regular*/
