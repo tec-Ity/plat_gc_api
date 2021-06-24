@@ -6,7 +6,7 @@ fetchObj = {
 		"content-type": "application/json",
 		"authorization": "Bear"+" "+accessToken
 	},
-	body: JSON.stringify({"obj": dataObj});	
+	body: JSON.stringify({"obj": dataObj, "force": dataForce});	
 }
 dataObj = {
 	nome: {required: false, type: String, description: "产品名称"},
@@ -21,6 +21,9 @@ dataObj = {
 	sort: {required: false, type: Number, default: 0, description: "产品排序"},
 	// disable
 	img_urls: "查看 PdPut_ImgPost PdPut_ImgDelete 接口"
+}
+dataForce = {
+	Categs: {required: false, type: Boolean, description: "强制更新 子商品"},
 }
 
 /* ------------------------ PdPut_ImgPost ------------------------ */

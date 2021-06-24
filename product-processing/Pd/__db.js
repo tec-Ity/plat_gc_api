@@ -24,6 +24,7 @@ price_regular: Float,		// 默认价格 sku一般同步此价格
 is_usable: { type: Boolean, default: true },			// 如果 is_usable_Firm == 0 那么 is_usable = 0;
 
 /* 只读 */
+Prods: [{type: ObjectId, ref: "Prod"}],
 num_likes: {type: Number, default: 0},		// 只读 为之后分析公司产品预留
 num_unlikes: {type: Number, default: 0},	// 只读 为之后分析公司产品预留
 
