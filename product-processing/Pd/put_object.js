@@ -32,10 +32,21 @@ axios.post("api", formData, {
 	}
 })
 
-formData.append("file_"+i, image_File);
-formData.append("obj", JSON.stringify({dataObj}));
+[formData.append("file_"+i, image_File)];
+
+/* ------------------------ PdPut_ImgPut ------------------------ */
+api = "https://example.com/api/v1/PdPut_ImgPut/:id";
+fetchObj = {
+	methods: "PUT",
+	headers: {
+		"content-type": "application/json",
+		"authorization": "Bear"+" "+accessToken
+	},
+	body: JSON.stringify({"put_img": dataObj});
+}
 dataObj = {
-	insert: {required: false, type: String, description: "插入方式  如果 insert == 'unshift' 则从前插入, 否则为push"}
+	index: {required: true, type: Number, description: "图片放置位置"},
+	img_url: {required: true, type: String, description: "产品图片路径"},
 }
 
 /* ------------------------ PdPut_ImgDelete ------------------------ */
@@ -46,10 +57,10 @@ fetchObj = {
 		"content-type": "application/json",
 		"authorization": "Bear"+" "+accessToken
 	},
-	body: JSON.stringify(dataObj);				// 注意 不是 JSON.stringify({dataObj});
+	body: JSON.stringify({"del_imgs": dataObj});
 }
 dataObj = {
-	img_urls: {required: false, type: Array, description: "产品图片路径"},
+	img_urls: {required: true, type: Array, description: "产品图片路径"},
 }
 
 // 返回值

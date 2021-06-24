@@ -9,7 +9,7 @@ fetchObj = {
     body: JSON.stringify({"obj": dataObj});    
 }
 dataObj = {
-    Cita: {required: true, type: String, description: "服务城市"},
+    Cita: {required: true, type: ObjectId, description: "服务城市"},
     price_ship: {required: true, type: Float, description: "额外运费"}
 }
 

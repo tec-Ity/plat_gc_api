@@ -13,7 +13,7 @@ axios.post("api", formData, {
 })
 
 formData.append("file_"+i, image_File);
-formData.append("obj", JSON.stringify({dataObj}));
+formData.append("obj", JSON.stringify(dataObj));
 
 dataObj = {
 	nome: {required: true, type: String, description: "产品名称"},
