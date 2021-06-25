@@ -33,7 +33,7 @@ args = {
 
 	Brand: {required: false, type: ObjectId, description: "根据品牌筛选产品"},
 	Nation: {required: false, type: ObjectId, description: "根据国家筛选产品"},
-	Categs: {required: false, type: Array[ObjectId], description: "根据产品分类筛选产品"},
+	Categs: {required: false, type: Array[ObjectId], description: "根据产品二级分类筛选产品"},
 
 	search: {required: false, type: String, description: "根据字符串匹配[code, nome]相匹配的产品"},
 	excludes: {required: false, type: Array[ObjectID], default: [], description: "查找出去此数组中所有IDs之外的产品", },

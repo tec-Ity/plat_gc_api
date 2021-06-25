@@ -1,4 +1,4 @@
-api = "https://example.com/api/v1/Prod/[:id]";
+api = "https://example.com/api/v1/Attr/[:id]";
 
 fetchObj = {
 	methods: "GET",

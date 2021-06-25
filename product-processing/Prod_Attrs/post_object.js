@@ -1,4 +1,4 @@
-api = "https://example.com/api/v1/ProdPut/:id/AttrPost";
+api = "https://example.com/api/v1/AttrPost/:id/AttrPost";
 
 fetchObj = {
     methods: "PUT",
@@ -9,6 +9,7 @@ fetchObj = {
     body: JSON.stringify({"obj": dataObj});    
 }
 dataObj = {
-    code: {required: true, type: String, description: "服务城市"},
-    options: {required: true, type: Array[String], description: "额外运费"}
+    nome: {required: true, type: String, description: "商品属性名称"},
+    options: {required: true, type: Array[String], description: "商品属性值"},
+    sort: {required: false, type: Number, description: "商品属性的排序"}
 }

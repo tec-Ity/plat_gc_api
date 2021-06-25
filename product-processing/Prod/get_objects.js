@@ -1,9 +1,9 @@
-api = "https://example.com/api/v1/Pds";
-api = "https://example.com/api/v1/Pds?"+"&[key in args]=[args[key]]";
+api = "https://example.com/api/v1/Prods";
+api = "https://example.com/api/v1/Prods?"+"&[key in args]=[args[key]]";
 /* 
 	"example": [
-		"https://example.com/api/v1/Pds?search=N",
-		"https://example.com/api/v1/Pds?search=N&page=2&sortKey=code&sortVal=1",
+		"https://example.com/api/v1/Prods?search=N",
+		"https://example.com/api/v1/Prods?search=N&page=2&sortKey=code&sortVal=1",
 	],
 */
 fetchObj = {
@@ -30,27 +30,28 @@ args = {
 		default: "-1",
 		description: "排序方式"
 	},
+	Pd: {required: false, type: ObjectId, description: "找出相应产品下的所有商品"},
 
-	search: {required: false, type: String, description: "根据字符串匹配[code, nome]相匹配的产品"},
-	excludes: {required: false, type: Array[ObjectID], default: [], description: "查找出去此数组中所有IDs之外的产品", },
-	includes: {required: false, type: Array[ObjectID], default: [], description: "查找包含所有此数组中所有IDs的产品", },
+	search: {required: false, type: String, description: "根据字符串匹配[code, nome]相匹配的商品"},
+	excludes: {required: false, type: Array[ObjectID], default: [], description: "查找出去此数组中所有IDs之外的商品", },
+	includes: {required: false, type: Array[ObjectID], default: [], description: "查找包含所有此数组中所有IDs的商品", },
 
-	Brand: {required: false, type: ObjectId, description: "根据品牌筛选产品"},
-	Nation: {required: false, type: ObjectId, description: "根据国家筛选产品"},
-	Categ: {required: false, type: ObjectId, description: "根据产品分类筛选产品"},
+	Brand: {required: false, type: ObjectId, description: "根据品牌筛选商品"},
+	Nation: {required: false, type: ObjectId, description: "根据国家筛选商品"},
+	Categ: {required: false, type: ObjectId, description: "根据商品二级分类筛选商品"},
 
 	is_usable: {required: false, type: Boolean, description: "是否可用"},
 
-	User_crt: {required: false, type: ObjectID, default: [], description: "查找此人创建的产品", },
-	User_upd: {required: false, type: ObjectID, default: [], description: "查找此人更新的产品", },
+	User_crt: {required: false, type: ObjectID, default: [], description: "查找此人创建的商品", },
+	User_upd: {required: false, type: ObjectID, default: [], description: "查找此人更新的商品", },
 
-	crt_after: {required: false, type: date, description: "给出一个时间格式[MM/DD/YYYY], 搜索此时间戳之后创建的产品"},
-	upd_after: {required: false, type: date, description: "给出一个时间格式[MM/DD/YYYY], 搜索此时间戳之后更新的产品"},
-	crt_before: {required: false, type: date, description: "给出一个时间格式[MM/DD/YYYY], 搜索此时间戳之前创建的产品"},
-	upd_before: {required: false, type: date, description: "给出一个时间格式[MM/DD/YYYY], 搜索此时间戳之前更新的产品"}
+	crt_after: {required: false, type: date, description: "给出一个时间格式[MM/DD/YYYY], 搜索此时间戳之后创建的商品"},
+	upd_after: {required: false, type: date, description: "给出一个时间格式[MM/DD/YYYY], 搜索此时间戳之后更新的商品"},
+	crt_before: {required: false, type: date, description: "给出一个时间格式[MM/DD/YYYY], 搜索此时间戳之前创建的商品"},
+	upd_before: {required: false, type: date, description: "给出一个时间格式[MM/DD/YYYY], 搜索此时间戳之前更新的商品"}
 
-    sort_gte: {required: false, type: Number, description: "给出一个数字, 搜索此大于此数字排序的产品"},
-    sort_lte: {required: false, type: Number, description: "给出一个数字, 搜索此小于此数字排序的产品"},
+    sort_gte: {required: false, type: Number, description: "给出一个数字, 搜索此大于此数字排序的商品"},
+    sort_lte: {required: false, type: Number, description: "给出一个数字, 搜索此小于此数字排序的商品"},
 }
 
 // 返回值

@@ -3,7 +3,7 @@ Prod: {type: ObjectId, ref: 'Prod'},
 
 attrs: [{
 	Attr: {type: ObjectId, ref: 'Attr'},
-	code: String,
+	nome: String,
 	option: String
 }],
 
@@ -14,7 +14,7 @@ at_fromSale: Date,
 at_toSale: Date,
 
 purchase_note: String,
-limit_quantity: Number,
+limit_quantity: {type: Number, default: 0},
 
 is_controlStock: {type: Boolean, default: true},
 
@@ -22,7 +22,8 @@ quantity: Number,
 quantity_alert: Number,
 is_alert: Boolean, // 只读
 
-allow_backorder: Boolean,
+allow_backorder: {type: Boolean, default: true},
+
 Records: [{type: ObjectId, ref: 'Record'}],
 Batchs: [{type: ObjectId, ref: 'Batch'}],
 

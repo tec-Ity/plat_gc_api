@@ -1,9 +1,7 @@
-// 只有总公司管理员以上级别可以创建
-
-api = "https://example.com/api/v1/ProdPost";
+api = "https://example.com/api/v1/AttrPut/:id";
 
 fetchObj = {
-	methods: "POST",
+	methods: "PUT",
 	headers: {
 		"content-type": "application/json",
 		"authorization": "Bear"+" "+accessToken
@@ -11,8 +9,10 @@ fetchObj = {
 	body: JSON.stringify({"obj": dataObj});	
 }
 dataObj = {
-	Pd: {required: true, type: ObjectId, description: "商品所属产品"},
-	Shop: {required: crUser<101?true:false, type: ObjectId, description: "商品所属分店"},
+	nome: {required: false, type: String, description: "商品属性名称"},
+	sort: {required: false, type: Number, description: "商品属性排序"},
+
+	options: "如果修改 options 则查看 AttrPut_option 接口"
 }
 
 // 返回值

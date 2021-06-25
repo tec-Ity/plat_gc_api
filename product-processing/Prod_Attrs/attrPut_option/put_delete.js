@@ -1,9 +1,7 @@
-// 只有总公司管理员以上级别可以创建
-
-api = "https://example.com/api/v1/ProdPost";
+api = "https://example.com/api/v1/AttrPut/:id/optionDelete";
 
 fetchObj = {
-	methods: "POST",
+	methods: "PUT",
 	headers: {
 		"content-type": "application/json",
 		"authorization": "Bear"+" "+accessToken
@@ -11,8 +9,7 @@ fetchObj = {
 	body: JSON.stringify({"obj": dataObj});	
 }
 dataObj = {
-	Pd: {required: true, type: ObjectId, description: "商品所属产品"},
-	Shop: {required: crUser<101?true:false, type: ObjectId, description: "商品所属分店"},
+	options: {required: true, type: Array[String], description: "要删除的 商品属性值"}
 }
 
 // 返回值

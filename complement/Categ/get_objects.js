@@ -1,3 +1,5 @@
+// 默认返回一级分类, 如需返回二级分类，请输入 Categ_far 参数
+
 api = "https://example.com/api/v1/Categs";
 api = "https://example.com/api/v1/Categs?"+"&[key in args]=[args[key]]";
 /* 
