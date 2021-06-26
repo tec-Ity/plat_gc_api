@@ -1,15 +1,14 @@
 api = "https://example.com/api/v1/AttrPut/:id/optionDelete";
-
-fetchObj = {
-	methods: "PUT",
-	headers: {
-		"content-type": "application/json",
-		"authorization": "Bear"+" "+accessToken
-	},
-	body: JSON.stringify({"obj": dataObj});	
-}
-dataObj = {
-	options: {required: true, type: Array[String], description: "要删除的 商品属性值"}
+method = "PUT";
+formData = {
+	"delObj": {
+		options: {required: true, type: Array[String], description: "要删除的 商品属性值"}
+	}
+};
+headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    "authorization": "auth"+" "+accessToken
 }
 
 // 返回值

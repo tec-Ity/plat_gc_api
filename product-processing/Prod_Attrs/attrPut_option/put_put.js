@@ -1,17 +1,16 @@
 api = "https://example.com/api/v1/AttrPut/:id/optionPut";
-
-fetchObj = {
-	methods: "PUT",
-	headers: {
-		"content-type": "application/json",
-		"authorization": "Bear"+" "+accessToken
-	},
-	body: JSON.stringify({"obj": dataPut});	
-}
-dataPut = {
-	option: {required: true, type: String, description: "要修改的 原商品属性值"},
-	sort: {required: false, type: Number, description: "属性值的排序"},
-	optionPut: {required: !sort && true, type: String, description: "要修改的 新商品属性值"}
+method = "PUT";
+formData = {
+	"putObj": {
+		option: {required: true, type: String, description: "要修改的 原商品属性值"},
+		sort: {required: false, type: Number, description: "属性值的排序"},
+		optionPut: {required: !sort && true, type: String, description: "要修改的 新商品属性值"}
+	}
+};
+headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    "authorization": "auth"+" "+accessToken
 }
 
 // 返回值

@@ -1,9 +1,12 @@
 api = "https://example.com/api/v1/PdPut_ImgPost/:id";
-axios.post("api", formData, {
-	headers: {
-		"content-type": "application/json",
-		"authorization": "accessToken " + accessToken
-	}
-})
-
+method = "PUT";
+formData = new formData();
 [formData.append("file_"+i, image_File)];
+    
+headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    "authorization": "auth"+" "+accessToken
+}
+
+
