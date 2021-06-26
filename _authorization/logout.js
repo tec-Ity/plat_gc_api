@@ -1,12 +1,11 @@
 // 用户创建接口 API
 api = "https://example.com/api/v1/logout";
-
-req = {
-	url: "https://example.com/api/v1/logout",
-	methods: "GET",
-	headers: {
-		"authorization": "(refreshToken)"
-	}
+methods = "GET";
+formData = null;
+headers = {
+	'Accept': 'application/json',
+	'Content-Type': 'application/json'
+	"authorization": "auth"+" "+refreshToken		// 注意要传递 refreshToken
 }
 
 

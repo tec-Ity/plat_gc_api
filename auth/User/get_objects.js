@@ -1,19 +1,19 @@
 // 管理者可以调取权限较低的用户列表, 如果是分店管理者: 只可以调取本店的用户列表
 
 api = "https://example.com/api/v1/Users";
-api = "https://example.com/api/v1/Users?"+"&[key in args]=[args[key]]";
+query = "?"+["&[key in args]=[args[key]]"],
 /* 
-	"example": [
-		"https://example.com/api/v1/Users?search=N",
-		"https://example.com/api/v1/Users?search=N&page=2&sortKey=code&sortVal=1",
-	],
+    "EX_url": [
+        api+"?search=N",
+        api+"?search=N&page=2&sortKey=code&sortVal=1",
+    ],
 */
-fetchObj = {
-    methods: "GET",
-    headers: {
-        "content-type": "application/json",
-        "authorization": "Bear"+" "+accessToken
-    }
+methods = "GET";
+formData = null;
+headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    "authorization": "auth"+" "+accessToken
 }
 
 args = {

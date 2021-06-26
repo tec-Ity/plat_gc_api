@@ -1,22 +1,23 @@
 api = "https://example.com/api/v1/BrandPut/:id";
+method = "PUT";
+formData = {
+    obj = {
+        code: {required: false, type: String, description: "品牌编号, 公司唯一"},
+        nome: {required: false, type: String, description: "品牌名称, 公司唯一"},
+        Nation: {required: false, type: ObjectId, description: "品牌所属国家"},
+        is_usable: {required: false, type: Boolean, description: "品牌是否可用"},
+        sort: {required: false, type: Number, description: "品牌的排序"},
+        img_url: {required: false, type: String, description: "品牌logo"},
+        Firm: "为只读",
+    }
+}
+headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    "authorization": "auth"+" "+accessToken
+}
 
-fetchObj = {
-	methods: "PUT",
-	headers: {
-		"content-type": "application/json",
-		"authorization": "Bear"+" "+accessToken
-	},
-	body: JSON.stringify({"obj": dataObj});	
-}
-dataObj = {
-	code: {required: false, type: String, description: "品牌编号, 公司唯一"},
-	nome: {required: false, type: String, description: "品牌名称, 公司唯一"},
-	Nation: {required: false, type: ObjectId, description: "品牌所属国家"},
-	is_usable: {required: false, type: Boolean, description: "品牌是否可用"},
-	sort: {required: false, type: Number, description: "品牌的排序"},
-	img_url: {required: false, type: String, description: "品牌logo"},
-	Firm: "为只读",
-}
+
 
 // 返回值
 // status(200);

@@ -1,14 +1,14 @@
 // 用户创建接口 API
-api = "https://example.com/api/v1/login";
 
-req = {
-	url: "https://example.com/api/v1/login",
-	methods: "POST",
-	data: {
-		code: {required: false, type: String, description: "用户编号"},	
-		pwd: {required: false, type: String, description: "用户密码"}
-	}
+api = "https://example.com/api/v1/login";
+method = "POST";
+formData = {
+	code: {required: false, type: String, description: "用户编号"},	
+	pwd: {required: false, type: String, description: "用户密码"}
 }
+headers = null;
+
+
 
 // 返回值
 // status(200);

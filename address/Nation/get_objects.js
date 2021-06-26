@@ -1,17 +1,19 @@
 api = "https://example.com/api/v1/Nations";
+query = "?"+["&[key in args]=[args[key]]"],
 /* 
-	"EX_url": [
-		"https://example.com/api/v1/Nations?search=N",
-		"https://example.com/api/v1/Nations?search=N&page=2&sortKey=code&sortVal=1",
-	],
+    "EX_url": [
+        api+"?search=N",
+        api+"?search=N&page=2&sortKey=code&sortVal=1",
+    ],
 */
-req = {
-	url: "https://example.com/api/v1/Nations?"+"&[key in args]=[args[key]]",
-	methods: "GET",
-	headers: {
-		authorization: "(accessToken)"
-	},
+methods = "GET";
+formData = null;
+headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    "authorization": "auth"+" "+accessToken
 }
+
 args = {
 	pagesize: {required: false, type: Number, default: 50, description: "设置每页显示几条数据"},
 	page: {required: false, type: Number, default: 1, description: "当前获取的数据为第几页"},

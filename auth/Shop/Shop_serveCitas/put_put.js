@@ -1,15 +1,14 @@
 api = "https://example.com/api/v1/ShopPut/:id/serveCitaPut/:id_Cita";
-
-fetchObj = {
-	methods: "PUT",
-	headers: {
-		"content-type": "application/json",
-		"authorization": "Bear"+" "+accessToken
-	},
-	body: JSON.stringify({"obj": dataObj});	
+method = "PUT";
+formData = {
+    obj = {
+        price_ship: {required: true, type: Float, description: "额外运费"}
+    }
 }
-dataObj = {
-	price_ship: {required: true, type: Float, description: "额外运费"}
+headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    "authorization": "auth"+" "+accessToken
 }
 
 // 返回值

@@ -1,26 +1,24 @@
 // 只有总公司管理员以上级别可以创建
 
 api = "https://example.com/api/v1/UserPost";
+method = "POST";
+formData = {
+    obj = {
+        code: {required: true, type: String, description: "用户账户, 系统唯一"},
+        pwd: {required: true, type: String, description: "用户密码"},
 
-fetchObj = {
-	methods: "POST",
-	headers: {
-		"content-type": "application/json",
-		"authorization": "Bear"+" "+accessToken
-	},
-	body: JSON.stringify({"obj": dataObj});	
+        role: {required: true, type: Number, description: "用户密码"},
+        Shop: {required: role>100?true:false, type: ObjectId, description: "所属分店"},
+
+        nome: {required: false, type: String, description: "员工名字"},
+        phonePre: {required: false, type: String, description: "电话前缀"},
+        phone: {required: false, type: String, description: "员工电话"},
+    }
 }
-dataObj = {
-	code: {required: true, type: String, description: "用户账户, 系统唯一"},
-	pwd: {required: true, type: String, description: "用户密码"},
-
-	role: {required: true, type: Number, description: "用户密码"},
-	Shop: {required: role>100?true:false, type: ObjectId, description: "所属分店"},
-
-	nome: {required: false, type: String, description: "员工名字"},
-	phonePre: {required: false, type: String, description: "电话前缀"},
-	phone: {required: false, type: String, description: "员工电话"},
-
+headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    "authorization": "auth"+" "+accessToken
 }
 
 // 返回值

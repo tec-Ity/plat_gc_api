@@ -1,22 +1,22 @@
 // 只有总公司管理员以上级别可以创建
 
 api = "https://example.com/api/v1/BrandPost";
+method = "POST";
+formData = {
+    obj = {
+        code: {required: true, type: String, description: "品牌编号, 公司唯一"},
+        nome: {required: true, type: String, description: "品牌名称, 公司唯一"},
 
-fetchObj = {
-	methods: "POST",
-	headers: {
-		"content-type": "application/json",
-		"authorization": "Bear"+" "+accessToken
-	},
-	body: JSON.stringify({"obj": dataObj});	
+        Nation: {required: false, type: ObjectId, description: "品牌所属国家"},
+        img_url: {required: false, type: String, description: "品牌logo"}
+    }
 }
-dataObj = {
-	code: {required: true, type: String, description: "品牌编号, 公司唯一"},
-	nome: {required: true, type: String, description: "品牌名称, 公司唯一"},
+headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    "authorization": "auth"+" "+accessToken
+}
 
-	Nation: {required: false, type: ObjectId, description: "品牌所属国家"},
-	img_url: {required: false, type: String, description: "品牌logo"}
-}
 
 // 返回值
 // status(200);

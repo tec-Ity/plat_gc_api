@@ -1,13 +1,12 @@
 // 如果此品牌下有产品 则不可被删除
 
 api = "https://example.com/api/v1/BrandDelete/[:id]";
-
-fetchObj = {
-	methods: "DELETE",
-	headers: {
-		"content-type": "application/json",
-		"authorization": "Bear"+" "+accessToken
-	},
+methods = "DELETE",
+formData = null;
+headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    "authorization": "auth"+" "+accessToken
 }
 
 

@@ -6,7 +6,7 @@ fetchObj = {
 		"content-type": "application/json",
 		"authorization": "Bear"+" "+accessToken
 	},
-	body: JSON.stringify({"put": dataPut});	
+	body: JSON.stringify({"obj": dataPut});	
 }
 dataPut = {
 	option: {required: true, type: String, description: "要修改的 原商品属性值"},

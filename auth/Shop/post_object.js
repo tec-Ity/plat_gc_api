@@ -1,26 +1,27 @@
 // 只有总公司管理员以上级别可以创建
 
 api = "https://example.com/api/v1/ShopPost";
+method = "POST";
+formData = {
+	obj = {
+		code: {required: true, type: String, description: "店铺编号, 公司唯一"},
+		nome: {required: true, type: String, description: "店铺名称, 公司唯一"},
+		Cita: {required: true, type: ObjectId, description: "店铺所属城市"},
 
-fetchObj = {
-	methods: "POST",
-	headers: {
-		"content-type": "application/json",
-		"authorization": "Bear"+" "+accessToken
-	},
-	body: JSON.stringify({"obj": dataObj});	
+		is_boutique: {required: false, type: Boolean, default: false, description: "是否为精品店"},
+		is_usable: {required: false, type: Boolean, default: true, description: "店铺是否可用"},
+		addr: {required: false, type: String, description: "店铺地址"},
+		zip: {required: false, type: String, description: "店铺邮编"},
+		img_url: {required: false, type: String, description: "店铺logo"}
+	}
 }
-dataObj = {
-	code: {required: true, type: String, description: "店铺编号, 公司唯一"},
-	nome: {required: true, type: String, description: "店铺名称, 公司唯一"},
-	Cita: {required: true, type: ObjectId, description: "店铺所属城市"},
+headers = {
+	'Accept': 'application/json',
+	'Content-Type': 'application/json'
+	"authorization": "auth"+" "+accessToken
+}
 
-	is_boutique: {required: false, type: Boolean, default: false, description: "是否为精品店"},
-	is_usable: {required: false, type: Boolean, default: true, description: "店铺是否可用"},
-	addr: {required: false, type: String, description: "店铺地址"},
-	zip: {required: false, type: String, description: "店铺邮编"},
-	img_url: {required: false, type: String, description: "店铺logo"}
-}
+
 
 // 返回值
 // status(200);

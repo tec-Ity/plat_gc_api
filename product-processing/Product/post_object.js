@@ -1,22 +1,22 @@
 // 只有总公司管理员以上级别可以创建
 
 api = "https://example.com/api/v1/PdPost";
+method = "POST";
+formData = {
+    obj = {
+        Prod: {required: true, type: ObjectId, description: "所属产品"}
+        attrs: [{
+        	nome: String,
+        	option: String
+        }] // {require: true,}
+    }
+}
+headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    "authorization": "auth"+" "+accessToken
+}
 
-fetchObj = {
-	methods: "POST",
-	headers: {
-		"content-type": "application/json",
-		"authorization": "Bear"+" "+accessToken
-	},
-	body: JSON.stringify({"obj": dataObj});	
-}
-dataObj = {
-	Prod: {required: true, type: ObjectId, description: "所属产品"}
-	attrs: [{
-		nome: String,
-		option: String
-	}] // {require: true,}
-}
 
 // 返回值
 // status(200);

@@ -1,28 +1,27 @@
 api = "https://example.com/api/v1/UserPut/:id";
+method = "PUT";
+formData = {
+	obj = {
+		Shop: {required: false, type: ObjectId, description: "员工所属城市"},		// 只有总公司管理员以上级别可以修改
 
-fetchObj = {
-	methods: "PUT",
-	headers: {
-		"content-type": "application/json",
-		"authorization": "Bear"+" "+accessToken
-	},
-	body: JSON.stringify({"obj": dataObj});	
+		code: {required: false, type: String, description: "用户编号, 系统唯一"},	// 管理者可以修改
+		nome: {required: false, type: String, description: "员工名称"},			// 管理者可以修改
+		phonePre: {required: false, type: String, description: "电话前缀"},		// 管理者可以修改
+		phone: {required: false, type: String, description: "员工电话"},			// 管理者可以修改
+		is_usable: {required: false, type: Number, description: "员工是否可用"},	// 管理者可以修改
+		role: {required: false, type: Number, description: "员工的排序"},			// 管理者可以修改
+		sort: {required: false, type: Number, description: "员工的排序"},			// 管理者可以修改
+
+		pwd: {required: false, type: String, description: "用户密码"},			// 管理者可以修改, 本人修改需要原密码
+		// disable
+		Firm: "为只读",
+		User_crt: "为只读",
+	}
 }
-dataObj = {
-	Shop: {required: false, type: ObjectId, description: "员工所属城市"},		// 只有总公司管理员以上级别可以修改
-
-	code: {required: false, type: String, description: "用户编号, 系统唯一"},	// 管理者可以修改
-	nome: {required: false, type: String, description: "员工名称"},			// 管理者可以修改
-	phonePre: {required: false, type: String, description: "电话前缀"},		// 管理者可以修改
-	phone: {required: false, type: String, description: "员工电话"},			// 管理者可以修改
-	is_usable: {required: false, type: Number, description: "员工是否可用"},	// 管理者可以修改
-	role: {required: false, type: Number, description: "员工的排序"},			// 管理者可以修改
-	sort: {required: false, type: Number, description: "员工的排序"},			// 管理者可以修改
-
-	pwd: {required: false, type: String, description: "用户密码"},			// 管理者可以修改, 本人修改需要原密码
-	// disable
-	Firm: "为只读",
-	User_crt: "为只读",
+headers = {
+	'Accept': 'application/json',
+	'Content-Type': 'application/json'
+	"authorization": "auth"+" "+accessToken
 }
 
 // 返回值

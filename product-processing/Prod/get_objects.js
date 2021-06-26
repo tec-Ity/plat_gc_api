@@ -1,17 +1,17 @@
 api = "https://example.com/api/v1/Prods";
-api = "https://example.com/api/v1/Prods?"+"&[key in args]=[args[key]]";
+query = "?"+["&[key in args]=[args[key]]"],
 /* 
-	"example": [
-		"https://example.com/api/v1/Prods?search=N",
-		"https://example.com/api/v1/Prods?search=N&page=2&sortKey=code&sortVal=1",
-	],
+    "EX_url": [
+        api+"?search=N",
+        api+"?search=N&page=2&sortKey=code&sortVal=1",
+    ],
 */
-fetchObj = {
-    methods: "GET",
-    headers: {
-        "content-type": "application/json",
-        "authorization": "Bear"+" "+accessToken
-    }
+methods = "GET";
+formData = null;
+headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    "authorization": "auth"+" "+accessToken
 }
 
 args = {

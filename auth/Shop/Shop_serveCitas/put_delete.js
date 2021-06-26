@@ -1,11 +1,11 @@
 api = "https://example.com/api/v1/ShopPut/:id/serveCitaDelete/:id_Cita";
 
-fetchObj = {
-	methods: "PUT",
-	headers: {
-		"content-type": "application/json",
-		"authorization": "Bear"+" "+accessToken
-	},
+method = "PUT";
+formData = null;
+headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    "authorization": "auth"+" "+accessToken
 }
 
 // 返回值

@@ -1,17 +1,18 @@
 api = "https://example.com/api/v1/ShopPut/:id/serveCitaPost";
 
-fetchObj = {
-    methods: "PUT",
-    headers: {
-        "content-type": "application/json",
-        "authorization": "Bear"+" "+accessToken
-    },
-    body: JSON.stringify({"obj": dataObj});    
+method = "PUT";
+formData = {
+    obj = {
+        Cita: {required: true, type: ObjectId, description: "服务城市"},
+        price_ship: {required: true, type: Float, description: "额外运费"}
+    }
 }
-dataObj = {
-    Cita: {required: true, type: ObjectId, description: "服务城市"},
-    price_ship: {required: true, type: Float, description: "额外运费"}
+headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    "authorization": "auth"+" "+accessToken
 }
+
 
 // 返回值
 // status(200);

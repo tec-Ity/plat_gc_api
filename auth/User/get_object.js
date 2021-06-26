@@ -1,13 +1,12 @@
 // 所有用户可以调取自己, 管理者可以调取权限较低的用户, 如果是分店管理者: 只可以调取本店的
 
 api = "https://example.com/api/v1/User/[:id]";
-
-fetchObj = {
-	methods: "GET",
-	headers: {
-		"content-type": "application/json",
-		"authorization": "Bear"+" "+accessToken
-	},
+methods = "GET";
+formData = null;
+headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    "authorization": "auth"+" "+accessToken
 }
 
 // 返回值

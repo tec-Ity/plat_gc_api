@@ -1,19 +1,19 @@
 // 默认返回一级分类, 如需返回二级分类，请输入 Categ_far 参数
 
 api = "https://example.com/api/v1/Categs";
-api = "https://example.com/api/v1/Categs?"+"&[key in args]=[args[key]]";
+query = "?"+["&[key in args]=[args[key]]"],
 /* 
-	"example": [
-		"https://example.com/api/v1/Categs?search=N",
-		"https://example.com/api/v1/Categs?search=N&page=2&sortKey=code&sortVal=1",
-	],
+    "EX_url": [
+        api+"?search=N",
+        api+"?search=N&page=2&sortKey=code&sortVal=1",
+    ],
 */
-fetchObj = {
-    methods: "GET",
-    headers: {
-        "content-type": "application/json",
-        "authorization": "Bear"+" "+accessToken
-    }
+methods = "GET";
+formData = null;
+headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    "authorization": "auth"+" "+accessToken
 }
 
 args = {
