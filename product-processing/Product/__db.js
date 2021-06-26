@@ -2,7 +2,6 @@ Pd: {type: ObjectId, ref: 'Pd'},
 Prod: {type: ObjectId, ref: 'Prod'},
 
 attrs: [{
-	Attr: {type: ObjectId, ref: 'Attr'},
 	nome: String,
 	option: String
 }],
@@ -10,8 +9,8 @@ attrs: [{
 price_regular: Float,
 price_sale: Float,
 
-at_fromSale: Date,
-at_toSale: Date,
+// at_fromSale: Date,
+// at_toSale: Date,
 
 purchase_note: String,
 limit_quantity: {type: Number, default: 0},
