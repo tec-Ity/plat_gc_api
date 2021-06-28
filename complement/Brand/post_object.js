@@ -3,7 +3,7 @@
 api = "https://example.com/api/v1/BrandPost";
 method = "POST";
 formData = {
-    obj = {
+    "obj": {
         code: {required: true, type: String, description: "品牌编号, 公司唯一"},
         nome: {required: true, type: String, description: "品牌名称, 公司唯一"},
 

@@ -1,7 +1,7 @@
 api = "https://example.com/api/v1/ProdPut/:id";
 method = "PUT";
 formData = {
-	obj = {
+	"obj": {
 		desp: {required: false, type: String, description: "商品描述"},
 		unit: {required: false, type: String, description: "商品单位, 如: 瓶 个 箱 PZ"},
 		Categs: {required: false, type: Array[ObjectId], description: "商品二级分类"},

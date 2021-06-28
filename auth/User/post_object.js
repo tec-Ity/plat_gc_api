@@ -3,7 +3,7 @@
 api = "https://example.com/api/v1/UserPost";
 method = "POST";
 formData = {
-    obj = {
+    "obj": {
         code: {required: true, type: String, description: "用户账户, 系统唯一"},
         pwd: {required: true, type: String, description: "用户密码"},
 

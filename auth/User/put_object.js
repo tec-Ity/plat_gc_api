@@ -1,7 +1,7 @@
 api = "https://example.com/api/v1/UserPut/:id";
 method = "PUT";
 formData = {
-	obj = {
+	"obj": {
 		Shop: {required: false, type: ObjectId, description: "员工所属城市"},		// 只有总公司管理员以上级别可以修改
 
 		code: {required: false, type: String, description: "用户编号, 系统唯一"},	// 管理者可以修改

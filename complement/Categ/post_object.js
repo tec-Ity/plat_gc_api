@@ -3,7 +3,7 @@
 api = "https://example.com/api/v1/CategPost";
 method = "POST";
 formData = {
-    obj = {
+    "obj": {
         code: {required: true, type: String, description: "分类编号, 公司唯一"},
 
         	level: {required: true, type: Number, enum: [1, 2], description: "分类层级"},

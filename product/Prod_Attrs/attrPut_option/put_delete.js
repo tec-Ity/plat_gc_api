@@ -3,6 +3,7 @@ method = "PUT";
 formData = {
 	"delObj": {
 		options: {required: true, type: Array[String], description: "要删除的 商品属性值"}
+        // 如果 options 后端可以识别 '["a", "b"]'  "['a', 'b']"  "a, b"   "'a','b'"   等字符串数组
 	}
 };
 headers = {

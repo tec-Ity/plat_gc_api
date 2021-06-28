@@ -1,7 +1,7 @@
 api = "https://example.com/api/v1/CategPut/:id";
 method = "PUT";
 formData = {
-	obj = {
+	"obj": {
 		code: {required: false, type: String, description: "分类编号, 公司唯一"},
 		is_usable: {required: false, type: Boolean, description: "分类是否可用"},
 		sort: {required: false, type: Number, description: "分类的排序"},	

@@ -1,7 +1,7 @@
 api = "https://example.com/api/v1/ShopPut/:id/serveCitaPost";
 method = "PUT";
 formData = {
-    obj = {
+    "obj": {
         Cita: {required: true, type: ObjectId, description: "服务城市"},
         price_ship: {required: true, type: Float, description: "额外运费"}
     }

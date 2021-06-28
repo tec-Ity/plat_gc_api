@@ -3,7 +3,7 @@
 api = "https://example.com/api/v1/PdPost";
 method = "POST";
 formData = {
-    obj = {
+    "obj": {
         Prod: {required: true, type: ObjectId, description: "所属产品"}
         attrs: [{
         	nome: String,

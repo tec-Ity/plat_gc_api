@@ -3,7 +3,7 @@
 api = "https://example.com/api/v1/ShopPost";
 method = "POST";
 formData = {
-	obj = {
+	"obj": {
 		code: {required: true, type: String, description: "店铺编号, 公司唯一"},
 		nome: {required: true, type: String, description: "店铺名称, 公司唯一"},
 		Cita: {required: true, type: ObjectId, description: "店铺所属城市"},

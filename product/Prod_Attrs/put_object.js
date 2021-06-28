@@ -1,7 +1,7 @@
 api = "https://example.com/api/v1/AttrPut/:id";
 method = "PUT";
 formData = {
-	obj = {
+	"obj": {
 		nome: {required: false, type: String, description: "商品属性名称"},
 		sort: {required: false, type: Number, description: "商品属性排序"},
 

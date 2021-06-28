@@ -1,7 +1,7 @@
 api = "https://example.com/api/v1/ShopPut/:id";
 method = "PUT";
 formData = {
-	obj = {
+	"obj": {
 		code: {required: false, type: String, description: "店铺编号, 公司唯一"},	// 只有总公司管理员以上级别可以修改
 		nome: {required: false, type: String, description: "店铺名称, 公司唯一"},	// 只有总公司管理员以上级别可以修改
 		Cita: {required: false, type: ObjectId, description: "店铺所属城市"},		// 只有总公司管理员以上级别可以修改, 且serve_Citas中要包含新城市
