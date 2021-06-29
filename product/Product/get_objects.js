@@ -1,4 +1,4 @@
-api = "https://example.com/api/v1/Pds";
+api = "https://example.com/api/v1/Products";
 query = "?"+["&[key in args]=[args[key]]"],
 /* 
     "EX_url": [
@@ -34,10 +34,6 @@ args = {
 	search: {required: false, type: String, description: "根据字符串匹配[code, nome]相匹配的产品"},
 	excludes: {required: false, type: Array[ObjectID], default: [], description: "查找出去此数组中所有IDs之外的产品", },
 	includes: {required: false, type: Array[ObjectID], default: [], description: "查找包含所有此数组中所有IDs的产品", },
-
-	Brand: {required: false, type: ObjectId, description: "根据品牌筛选产品"},
-	Nation: {required: false, type: ObjectId, description: "根据国家筛选产品"},
-	Categ: {required: false, type: ObjectId, description: "根据产品分类筛选产品"},
 
 	is_usable: {required: false, type: Boolean, description: "是否可用"},
 
