@@ -1,3 +1,4 @@
+api = "https://example.com/api/b1/Citas";
 api = "https://example.com/api/v1/Citas";
 query = "?"+["&[key in args]=[args[key]]"],
 /* 

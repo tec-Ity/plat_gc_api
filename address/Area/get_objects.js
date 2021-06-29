@@ -1,3 +1,4 @@
+api = "https://example.com/api/b1/Areas";
 api = "https://example.com/api/v1/Areas";
 query = "?"+["&[key in args]=[args[key]]"],
 /* 
