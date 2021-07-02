@@ -1,5 +1,5 @@
 // 用户创建接口 API
-api = "https://example.com/api/b1/logout";
+api = "https://example.com/api/v1/logout";
 methods = "GET";
 formData = null;
 headers = {

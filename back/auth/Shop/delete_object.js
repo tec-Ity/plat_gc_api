@@ -5,7 +5,7 @@ methods = "DELETE",
 formData = null;
 headers = {
     'Accept': 'application/json',
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
     "authorization": "auth"+" "+accessToken
 }
 

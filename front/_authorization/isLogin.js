@@ -1,5 +1,5 @@
 // 判度是否登陆
-api = "https://example.com/api/b1/isLogin";
+api = "https://example.com/api/v1/isLogin";
 methods = "GET";
 formData = null;
 headers = {
@@ -14,13 +14,20 @@ res = {
 	status: 200,
 	message: "",
 	data: {
-		crUser: {							// 返回 当前使用 用户 前缀 cr: current
+		crClient: {
+			email: 'kelin@gmail.com',
+			is_active_email: true,
 			phonePre: '0039',
 			phone: '3888676756',
-			code: 'GCMANAGER',
+			is_active_phone: false,
+			is_active: true,
+			socials: [
+				{
+					social_type: "facebook",
+					social_id: "128391872783"
+				}
+			],
 			nome: 'wang',
-			role: '1',
-			Firm: '5ea8446975800b73d8da0e34',
 		},
 		accessToken: 'eyJ...CD1349Mw'
 	}

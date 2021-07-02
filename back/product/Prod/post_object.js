@@ -8,9 +8,10 @@ formData = {
 		Shop: {required: crUser<101?true:false, type: ObjectId, description: "商品所属分店"},
 	}
 }
-headers: {
-	"content-type": "application/json",
-	"authorization": "Bear"+" "+accessToken
+headers = {
+	'Accept': 'application/json',
+	'Content-Type': 'application/json',
+	"authorization": "auth"+" "+accessToken
 }
 
 // 返回值
