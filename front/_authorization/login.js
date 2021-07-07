@@ -3,14 +3,24 @@
 api = "https://example.com/api/v1/login";
 method = "POST";
 formData = {
-	"login_type": {required: true, type: String, description: "登陆方式"}; // enum: ["facebook"];
-	"facebook": {
-		Client_accessToken: {required: true, type: String, description: "客户 facebook 的 accessToken"},
-		// user_id: {required: true, type: String, description: "客户 facebook 的 user_id"},
-		"obj": {
-			email: {required: true, type: String, description: "客户 facebook 的 email "},
-			nome: {required: false, type: String, description: "客户 facebook 的 名字 "}
-		}
+	"system": {	// 如果是 系统登陆 则不需要传 social 对象 和 obj 对象
+		// code / 已激活邮箱 / 已激活电话 可直接用密码登陆。
+		// 已激活邮箱 / 已激活电话 可以验证码登陆
+		code: {required: false, type: String, description: "用户账号"},
+		email: {required: false, type: String, description: "用户 激活的邮箱 "},
+		phone: {required: false, type: String, description: "客户的 激活的电话 "},
+		phonePre: {required: false, type: String, description: "客户的 phonePre "},
+		pwd: {required: true, type: String, description: "用户密码"}
+	},
+	"social": {	// 第三方登陆 如果没有 系统登陆 system 对象 则必须传递 social 对象
+		"login_type": {required: true, type: String, description: "登陆方式"}; // enum: ["facebook", "google"];
+		"Client_accessToken": {required: true, type: String, description: "客户 facebook 的 accessToken"}
+	},
+	"obj": {	// 此为第一次登陆 需要的 用户信息 可以不传递
+		email: {required: false, type: String, description: "客户的 email "},
+		nome: {required: false, type: String, description: "客户的 名字 "},
+		phonePre: {required: false, type: String, description: "客户的 phonePre "},
+		phone: {required: false, type: String, description: "客户的 phone "}
 	}
 }
 headers = null;

@@ -1,6 +1,6 @@
 // 用户创建接口 API
 api = "https://example.com/api/b1/logout";
-methods = "GET";
+methods = "DELETE";
 formData = null;
 headers = {
 	'Accept': 'application/json',
