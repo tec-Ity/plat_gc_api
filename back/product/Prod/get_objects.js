@@ -1,11 +1,13 @@
 api = "https://example.com/api/b1/Prods";
 query = "?"+["&[key in args]=[args[key]]"],
+
 /* 
     "EX_url": [
         api+"?search=N",
         api+"?search=N&page=2&sortKey=code&sortVal=1",
     ],
 */
+
 methods = "GET";
 formData = null;
 headers = {
@@ -39,6 +41,9 @@ args = {
 	Brand: {required: false, type: ObjectId, description: "根据品牌筛选商品"},
 	Nation: {required: false, type: ObjectId, description: "根据国家筛选商品"},
 	Categ: {required: false, type: ObjectId, description: "根据商品二级分类筛选商品"},
+
+	is_festival: {required: false, type: Boolean, description: "是否为节日商品"},
+	is_hot: {required: false, type: Boolean, description: "是否热销"},
 
 	is_usable: {required: false, type: Boolean, description: "是否可用"},
 

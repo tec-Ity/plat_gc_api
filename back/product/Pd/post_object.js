@@ -16,7 +16,7 @@ obj = {
     // img_urls: {required: false, type: Array[String], description: "产品图片"},	// 文件传输
     desp: {required: false, type: String, description: "产品描述"},
     unit: {required: false, type: String, description: "产品单位, 如: 瓶 个 箱 PZ"},
-    is_usable: {required: false, type: Boolean, default: true, description: "产品邮编"},
+    is_usable: {required: false, type: Boolean, default: true, description: "产品是否可用"},
     sort: {required: false, type: Number, default: 0, description: "产品排序"}
 }
 headers = {
