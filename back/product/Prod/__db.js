@@ -22,9 +22,6 @@ unit: String,							// 单位
 Categs: [{type: ObjectId, ref: 'Categ'}],
 sort: Number,
 
-is_festival: {type: Boolean, default: false},
-is_hot: {type: Boolean, default: false},
-
 is_usable: { type: Boolean, default: false },	// 只有在 商品sku信息错误时 不可控
 
 Attrs: [{type: ObjectId, ref: "Attr"}],			// 只读 [由 Attr 决定] 公司层面是否可用

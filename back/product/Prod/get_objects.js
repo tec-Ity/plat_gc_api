@@ -40,7 +40,7 @@ args = {
 
 	Brand: {required: false, type: ObjectId, description: "根据品牌筛选商品"},
 	Nation: {required: false, type: ObjectId, description: "根据国家筛选商品"},
-	Categ: {required: false, type: ObjectId, description: "根据商品二级分类筛选商品"},
+	Categs: {required: false, type: ObjectId, description: "根据商品二级分类筛选商品"},
 
 	is_festival: {required: false, type: Boolean, description: "是否为节日商品"},
 	is_hot: {required: false, type: Boolean, description: "是否热销"},
