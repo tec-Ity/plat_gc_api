@@ -13,7 +13,7 @@ formData = {
 
 		// 需要查看 prod
 		Attrs:  "查看 Prod_Attrs 接口",
-		Products:  "查看 Prod_Sku 接口",
+		Skus:  "查看 Prod_Sku 接口",
 	}
 }
 

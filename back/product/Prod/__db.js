@@ -26,15 +26,15 @@ is_usable: { type: Boolean, default: false },	// 只有在 商品sku信息错误
 
 Attrs: [{type: ObjectId, ref: "Attr"}],			// 只读 [由 Attr 决定] 公司层面是否可用
 
-/* 只读 根据 Products 的price_sale 或 price_regular*/
-Products: [{type: ObjectId, ref: 'Product'}],	// 只读 [由 Products 决定] 公司层面是否可用
-is_simple: Boolean,								// 只读 [由 this.Products.length 决定] 如果 Products.length > 1 is_simple=false;
-price: Float,									// 只读 [由 Products 决定] 产品价格
-price_min: Float,								// 只读 [由 Products 决定]
-price_max: Float,								// 只读 [由 Products 决定]
-is_discount: Boolean, 							// 只读 [由 Products 决定] 根据 product 中的 is_discount
-is_sell: Boolean,								// 只读 [由 Products 决定] 根据 Products 决定
-is_alert: Boolean,								// 只读 [由 Products 决定] 根据 Products 决定
+/* 只读 根据 Skus 的price_sale 或 price_regular*/
+Skus: [{type: ObjectId, ref: 'Sku'}],	// 只读 [由 Skus 决定] 公司层面是否可用
+is_simple: Boolean,								// 只读 [由 this.Skus.length 决定] 如果 Skus.length > 1 is_simple=false;
+price: Float,									// 只读 [由 Skus 决定] 产品价格
+price_min: Float,								// 只读 [由 Skus 决定]
+price_max: Float,								// 只读 [由 Skus 决定]
+is_discount: Boolean, 							// 只读 [由 Skus 决定] 根据 product 中的 is_discount
+is_sell: Boolean,								// 只读 [由 Skus 决定] 根据 Skus 决定
+is_alert: Boolean,								// 只读 [由 Skus 决定] 根据 Skus 决定
 
 /* 只读 客户给予 */
 num_likes: {type: Number, default: 0},			// 只读

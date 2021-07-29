@@ -1,7 +1,7 @@
-api = "https://example.com/api/b1/PdPut_ImgPost/:id";
+api = "https://example.com/api/b1/CategPut_ImgPut/:id";
 method = "PUT";
 formData = new formData();
-[formData.append("file_"+i, image_File)];
+formData.append("file", image_File);
     
 headers = {
     'Accept': 'application/json',

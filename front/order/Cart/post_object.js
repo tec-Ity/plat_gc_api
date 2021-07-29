@@ -4,21 +4,13 @@ formData = {
 	"obj": {
 		Shop: {required: true, type: ObjectId, description: "店铺 _id"},
 	},
-
 	// required: false, type: Array[Object], description: "购物车 商品"
 	"items": [{
-		Pd: {required: true, type: ObjectId, description: "Pd _id"},
-		Prod: {required: true, type: ObjectId, description: "Prod _id"},
-		Product: {required: true, type: ObjectId, description: "Product _id"},
-
-		nome: {required: true, type: String, description: "商品名称"},
-		desp: {required: true, type: String, description: "商品属性描述"},
-
-		quantity: {required: true, type: Number, description: "商品采购数量"},
-		price: {required: true, type: Float, description: "商品采购价格"},
-		unit: {required: true, type: String, description: "商品单位"},
-
-		price_regular: Float,	// 原价
+		Prod: {required: true, type: ObjectId, description: "Sku _id"},
+		"varis":[{
+			Sku: {required: true, type: ObjectId, description: "Sku _id"},
+			quantity: {required: true, type: Number, description: "商品采购数量"},
+		}]
 	}],
 };
 

@@ -38,9 +38,11 @@ args = {
 	excludes: {required: false, type: Array[ObjectID], default: [], description: "查找出去此数组中所有IDs之外的商品", },
 	includes: {required: false, type: Array[ObjectID], default: [], description: "查找包含所有此数组中所有IDs的商品", },
 
-	Brand: {required: false, type: ObjectId, description: "根据品牌筛选商品"},
-	Nation: {required: false, type: ObjectId, description: "根据国家筛选商品"},
-	Categs: {required: false, type: ObjectId, description: "根据商品二级分类筛选商品"},
+	Brands: {required: false, type: String[ObjectId], description: "根据品牌筛选商品"},
+	Nations: {required: false, type: String[ObjectId], description: "根据国家筛选商品"},
+	Categs: {required: false, type: String[ObjectId], description: "根据商品二级分类筛选商品"},
+
+	Shops: {required: false, type: String[ObjectId], description: "根据分店筛选商品"},
 
 	is_festival: {required: false, type: Boolean, description: "是否为节日商品"},
 	is_hot: {required: false, type: Boolean, description: "是否热销"},

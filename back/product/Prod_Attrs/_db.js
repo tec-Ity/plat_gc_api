@@ -1,4 +1,4 @@
-// Prod Product 商品属性
+// Prod Sku 商品属性
 
 Prod: {type: ObjectId, ref: 'Prod'},
 
