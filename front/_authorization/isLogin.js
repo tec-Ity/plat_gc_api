@@ -16,10 +16,7 @@ res = {
 	data: {
 		crClient: {
 			email: 'kelin@gmail.com',
-			is_active_email: true,
-			phonePre: '0039',
-			phone: '3888676756',
-			is_active_phone: false,
+			phone: '+393888676756',
 			is_active: true,
 			socials: [
 				{
@@ -28,7 +25,6 @@ res = {
 				}
 			],
 			nome: 'wang',
-		},
-		accessToken: 'eyJ...CD1349Mw'
+		}
 	}
 }

@@ -1,10 +1,7 @@
-api = "https://example.com/api/v1/OrderSkuPost";
-method = "POST";
+api = "https://example.com/api/v1/OrderSkuPut/:id";
+method = "PUT";
 formData = {
-	"obj": {
-		Sku: {required: true, type: ObjectId, description: "Sku _id"},
-		quantity: {required: true, type: Number, description: "商品采购数量"},
-	},
+	quantity: {required: true, type: Number, description: "商品采购数量"},
 };
 
 headers = {
