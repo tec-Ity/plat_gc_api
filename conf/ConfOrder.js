@@ -1,6 +1,6 @@
 // 获取 用戶角色配置项
-api = "https://example.com/api/v1/ConfUserRole";
-api = "https://example.com/api/b1/ConfUserRole";
+api = "https://example.com/api/v1/ConfOrder";
+api = "https://example.com/api/b1/ConfOrder";
 methods = "GET";
 formData = null;
 
