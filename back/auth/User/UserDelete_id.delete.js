@@ -1,6 +1,6 @@
 // 只能删除比当前用户权限小的, 且只有管理者有删除权限
 
-api = "https://example.com/api/b1/ShopDelete/[:id]";
+api = "https://example.com/api/b1/UserDelete/[:id]";
 methods = "DELETE",
 formData = null;
 headers = {

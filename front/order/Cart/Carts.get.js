@@ -1,4 +1,4 @@
-api = "https://example.com/api/b1/Carts";
+api = "https://example.com/api/v1/Carts";
 query = "?"+["&[key in args]=[args[key]]"],
 /* 
     "EX_url": [
@@ -40,8 +40,10 @@ args = {
 	crt_before: {required: false, type: date, description: "给出一个时间格式[MM/DD/YYYY], 搜索此时间戳之前创建的产品"},
 	upd_before: {required: false, type: date, description: "给出一个时间格式[MM/DD/YYYY], 搜索此时间戳之前更新的产品"}
 
-    sort_gte: {required: false, type: Number, description: "给出一个数字, 搜索此大于此数字排序的产品"},
-    sort_lte: {required: false, type: Number, description: "给出一个数字, 搜索此小于此数字排序的产品"},
+	sort_gte: {required: false, type: Number, description: "给出一个数字, 搜索此大于此数字排序的产品"},
+	sort_lte: {required: false, type: Number, description: "给出一个数字, 搜索此小于此数字排序的产品"},
+
+	populateObjs: {required: false, type: Array[{}], description: "关联数据库"}
 }
 
 // 返回值
