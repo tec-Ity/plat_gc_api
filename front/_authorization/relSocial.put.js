@@ -1,6 +1,6 @@
-// 用户创建接口 API
+// 关联第三方账号 API
 
-api = "https://example.com/api/v1/reActive";
+api = "https://example.com/api/v1/relSocial";
 method = "PUT";
 formData = {
 	"login_type": {required: true, type: String, description: "登陆方式"}; // enum: ["facebook", "google"];

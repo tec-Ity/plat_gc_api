@@ -1,6 +1,6 @@
 // 默认返回一级分类, 如需返回二级分类，请输入 Categ_far 参数
 
-api = "https://example.com/api/b1/Categs";
+api = "https://example.com/api/v1/Categs";
 query = "?"+["&[key in args]=[args[key]]"],
 /* 
     "EX_url": [
@@ -22,8 +22,8 @@ args = {
 
 	sortKey: {
 		required: false,
-		type: String, // {enum: ["sort", "code", "is_usable"]},
-		default: ["is_usable", "sort", "code"],
+		type: String, // {enum: ["sort", "code"]},
+		default: ["sort", "code"],
 		description: "以什么来排序",
 	},
 	sortVal: {
@@ -39,8 +39,6 @@ args = {
 
 	Categ_far: {required: false, type: ObjectID, description: "查找父类下的所有子分类"},
 	level: {required: false, type: Number, default: 1, description: "查找某个层级的分类"},
-
-	is_usable: {required: false, type: Boolean, description: "是否可用"},
 
     User_crt: {required: false, type: ObjectID, default: [], description: "查找此人创建的分类", },
     User_upd: {required: false, type: ObjectID, default: [], description: "查找此人更新的分类", },

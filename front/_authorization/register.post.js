@@ -1,4 +1,4 @@
-// 用户创建接口 API
+// 用户注册接口 API
 
 api = "https://example.com/api/v1/register";
 method = "POST";
@@ -21,8 +21,6 @@ res = {
 	status: 200,
 	message: "",
 	data: {
-		accessToken,
-		refreshToken,
 		crClient: {
 			email: 'kelin@gmail.com',
 			is_active_email: true,

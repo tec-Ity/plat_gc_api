@@ -5,6 +5,9 @@ formData = {
 		Sku: {required: true, type: ObjectId, description: "Sku _id"},
 		quantity: {required: true, type: Number, description: "商品采购数量"},
 	},
+	"ship": {
+		Cita: {required: true, type: ObjectId, description: "如果没有购物车, 则需要传递城市 ID"},
+	}
 };
 
 headers = {

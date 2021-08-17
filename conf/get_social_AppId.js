@@ -10,7 +10,7 @@ res = {
 	status: 200,
 	message: "",
 	data: {
-		"facebook": "834002610551273",
-		"google": "834002610551273"
+	    "google": "804334050889-984fibdl2ku8aoq2d1oc880rb3gkfli9.apps.googleusercontent.com",
+	    "facebook": "834002610551271"
 	}
 }

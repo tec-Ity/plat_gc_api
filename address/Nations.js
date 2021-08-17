@@ -55,16 +55,15 @@ result = {
     "status": 200,
     "message": "[server] 返回国家数据成功",
     "data": {
-        "count": 3,
+        "count": 30,
         "page": 1,
         "pagesize": 50,
         "object": null,							// 如果search的值完全符合code 则返回 相应的数据
         "objects": [
             {
-                "img_url": "./media/defalut/Nation.jpg",
                 "is_usable": true,
                 "_id": "60c48b392cfcd22c4d7bbb60",
-                "img_url": "./media/defalut/Nation.jpg",
+                "url_img": "./media/defalut/Nation.jpg",
                 "code": "IT",
                 "nome": "ITALY",
                 "tel": "0039",
@@ -73,10 +72,9 @@ result = {
                 "__v": 0
             },
             {
-                "img_url": "./media/defalut/Nation.jpg",
                 "is_usable": true,
                 "_id": "60c48b4e2cfcd22c4d7bbb61",
-                "img_url": "./media/defalut/Nation.jpg",
+                "url_img": "./media/defalut/Nation.jpg",
                 "code": "CN",
                 "nome": "CHINA",
                 "tel": "0086",
@@ -85,17 +83,17 @@ result = {
                 "__v": 0
             },
             {
-                "img_url": "./media/defalut/Nation.jpg",
                 "is_usable": true,
                 "_id": "60c48b642cfcd22c4d7bbb62",
-                "img_url": "./media/defalut/Nation.jpg",
+                "url_img": "./media/defalut/Nation.jpg",
                 "code": "JP",
                 "nome": "JAPAN",
                 "tel": "0089",
                 "sort": 900,
                 "langs": [],
                 "__v": 0
-            }
+            },
+            ...
         ]
     },
     parameter: {

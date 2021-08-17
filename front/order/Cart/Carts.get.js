@@ -20,8 +20,8 @@ args = {
 
 	sortKey: {
 		required: false,
-		type: String, // {enum: ["sort", "code", "nome", "is_usable"]},
-		default: ["is_usable", "sort", "code"],
+		type: String, // {enum: ["sort", "code", "nome"]},
+		default: ["sort", "code"],
 		description: "以什么来排序",
 	},
 	sortVal: {

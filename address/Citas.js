@@ -66,11 +66,7 @@ result = {
                 "_id": "60c4ae2c74daf75532866e70",
                 "code": "PO",
                 "nome": "PRATO",
-                "Area": {
-                    "_id": "60c4a979fc343a4d901a3565",
-                    "code": "TOS",
-                    "nome": "TOSCANA"
-                },
+                "Area": "60c4a979fc343a4d901a3565",
                 "langs": [],
                 "__v": 0
             },
@@ -80,11 +76,27 @@ result = {
                 "_id": "60c4ae1f74daf75532866e6f",
                 "code": "FI",
                 "nome": "FIRENZE",
-                "Area": {
-                    "_id": "60c4a979fc343a4d901a3565",
-                    "code": "TOS",
-                    "nome": "TOSCANA"
-                },
+                "Area": "60c4a979fc343a4d901a3565",
+                "langs": [],
+                "__v": 0
+            },
+            {
+                "is_usable": true,
+                "sort": 120,
+                "_id": "60c4ae6674daf75532866e72",
+                "code": "RM",
+                "nome": "ROMA",
+                "Area": "60c4a9adfc343a4d901a3566",
+                "langs": [],
+                "__v": 0
+            },
+            {
+                "is_usable": true,
+                "sort": 100,
+                "_id": "60c4adb974daf75532866e6d",
+                "code": "MI",
+                "nome": "MILANO",
+                "Area": "60c4a95afc343a4d901a3564",
                 "langs": [],
                 "__v": 0
             },

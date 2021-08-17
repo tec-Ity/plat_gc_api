@@ -1,4 +1,4 @@
-api = "https://example.com/api/b1/Categ/[:id]";
+api = "https://example.com/api/v1/Categ/[:id]";
 methods = "GET";
 formData = null;
 headers = {

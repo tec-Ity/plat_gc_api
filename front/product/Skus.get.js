@@ -1,6 +1,4 @@
-/* 暂时可不用 */
-
-api = "https://example.com/api/v1/OrderProds";
+api = "https://example.com/api/v1/Skus";
 query = "?"+["&[key in args]=[args[key]]"],
 /* 
     "EX_url": [
@@ -22,8 +20,8 @@ args = {
 
 	sortKey: {
 		required: false,
-		type: String, // {enum: ["sort", "code", "nome"]},
-		default: ["sort", "code"],
+		type: String, // {enum: ["sort", "code", "nome", "is_usable"]},
+		default: ["is_usable", "sort", "code"],
 		description: "以什么来排序",
 	},
 	sortVal: {
@@ -37,15 +35,18 @@ args = {
 	excludes: {required: false, type: Array[ObjectID], default: [], description: "查找出去此数组中所有IDs之外的产品", },
 	includes: {required: false, type: Array[ObjectID], default: [], description: "查找包含所有此数组中所有IDs的产品", },
 
+	is_usable: {required: false, type: Boolean, description: "是否可用"},
+
+	User_crt: {required: false, type: ObjectID, default: [], description: "查找此人创建的产品", },
+	User_upd: {required: false, type: ObjectID, default: [], description: "查找此人更新的产品", },
+
 	crt_after: {required: false, type: date, description: "给出一个时间格式[MM/DD/YYYY], 搜索此时间戳之后创建的产品"},
 	upd_after: {required: false, type: date, description: "给出一个时间格式[MM/DD/YYYY], 搜索此时间戳之后更新的产品"},
 	crt_before: {required: false, type: date, description: "给出一个时间格式[MM/DD/YYYY], 搜索此时间戳之前创建的产品"},
 	upd_before: {required: false, type: date, description: "给出一个时间格式[MM/DD/YYYY], 搜索此时间戳之前更新的产品"}
 
-	sort_gte: {required: false, type: Number, description: "给出一个数字, 搜索此大于此数字排序的产品"},
-	sort_lte: {required: false, type: Number, description: "给出一个数字, 搜索此小于此数字排序的产品"},
-
-	populateObjs: {required: false, type: Array[{}], description: "关联数据库"}
+    sort_gte: {required: false, type: Number, description: "给出一个数字, 搜索此大于此数字排序的产品"},
+    sort_lte: {required: false, type: Number, description: "给出一个数字, 搜索此小于此数字排序的产品"},
 }
 
 // 返回值

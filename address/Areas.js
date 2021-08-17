@@ -64,11 +64,7 @@ args = {
                 "_id": "60c4a979fc343a4d901a3565",
                 "code": "TOS",
                 "nome": "TOSCANA",
-                "Nation": {
-                    "_id": "60c48b392cfcd22c4d7bbb60",
-                    "code": "IT",
-                    "nome": "ITALY"
-                },
+                "Nation": "60c48b392cfcd22c4d7bbb60",
                 "langs": [],
                 "__v": 0
             },
@@ -78,11 +74,7 @@ args = {
                 "_id": "60c4a9adfc343a4d901a3566",
                 "code": "LAZ",
                 "nome": "LAZIO",
-                "Nation": {
-                    "_id": "60c48b392cfcd22c4d7bbb60",
-                    "code": "IT",
-                    "nome": "ITALY"
-                },
+                "Nation": "60c48b392cfcd22c4d7bbb60",
                 "langs": [],
                 "__v": 0
             },
@@ -92,25 +84,7 @@ args = {
                 "_id": "60c4a95afc343a4d901a3564",
                 "code": "LOM",
                 "nome": "LOMBARDIA",
-                "Nation": {
-                    "_id": "60c48b392cfcd22c4d7bbb60",
-                    "code": "IT",
-                    "nome": "ITALY"
-                },
-                "langs": [],
-                "__v": 0
-            },
-            {
-                "is_usable": true,
-                "sort": 4,
-                "_id": "60c4aaab0f094550410fc1bd",
-                "code": "FVG",
-                "nome": "FRIULI VENEZIA GIULIA",
-                "Nation": {
-                    "_id": "60c48b392cfcd22c4d7bbb60",
-                    "code": "IT",
-                    "nome": "ITALY"
-                },
+                "Nation": "60c48b392cfcd22c4d7bbb60",
                 "langs": [],
                 "__v": 0
             },
