@@ -1,7 +1,7 @@
 api = "https://example.com/api/v1/Order_change_status/:id";
 method = "PUT";
 formData = {
-	"action": {required: true, type: String, description: "Sku _id"}, // type: ConfOrder.action.front || ConfOrder.action.back
+	"action": {required: true, type: String, description: "change status action"}, // type: ConfOrder.action.front 
 };
 headers = {
 	'Accept': 'application/json',
