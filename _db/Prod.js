@@ -9,6 +9,7 @@ img_urls: [String], 						// 只读 [由 Pd 决定] 产品图片
 Brand: {type: ObjectId, ref: 'Brand'},		// 只读 [由 Pd 决定] 产品品牌
 Nation: {type: ObjectId, ref: 'Nation'},	// 只读 [由 Pd 决定] 产品国家 比如 中国货 意大利货 日本货 韩国货
 is_usable_Firm: Boolean,					// 只读 [由 Pd 决定] 公司层面是否可用
+Categ: {type: ObjectId, ref: 'Categ'},		// 只读
 
 /* 同步 可修改 */
 desp: String,
@@ -19,7 +20,6 @@ desp: String, 							// 描述
 unit: String,							// 单位
 }],
 // Tags: [{type: ObjectId, ref: 'Tag'}],
-Categs: [{type: ObjectId, ref: 'Categ'}],
 sort: Number,
 
 is_usable: { type: Boolean, default: false },	// 只有在 商品sku信息错误时 不可控

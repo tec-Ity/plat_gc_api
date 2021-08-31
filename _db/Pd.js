@@ -9,6 +9,7 @@ img_urls: [String], 						// imgs
 Brand: {type: ObjectId, ref: 'Brand'},
 Nation: {type: ObjectId, ref: 'Nation'},
 is_usable_Firm: { type: Boolean, default: true },	// 是否可用 禁用后 分部也会被禁用
+Categ: {type: ObjectId, ref: 'Categ'},
 
 /* 同步 可修改 */
 desp: String,
@@ -19,7 +20,6 @@ langs: [{
 	unit: String,							// 单位
 }],
 // Tags: [{type: ObjectId, ref: 'Tag'}],
-Categs: [{type: ObjectId, ref: 'Categ'}],
 sort: Number,
 price_regular: Float,							// 默认价格 sku一般同步此价格
 //  (is_usable_Firm == 0) && (is_usable = 0); 

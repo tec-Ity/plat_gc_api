@@ -10,7 +10,7 @@ obj = {
     nome: {required: true, type: String, description: "产品名称"},
     Nation: {required: true, type: ObjectId, description: "产品所属国家"},
     Brand: {required: true, type: ObjectId, description: "产品所属品牌"},
-    Categs: {required: true, type: Array[ObjectId], description: "产品二级分类"},
+    Categ: {required: true, type: ObjectId, description: "产品二级分类"},
     price: {required: true, type: Float, default: 0, description: "商品同步产品时的默认价格, 可不填写"},
     code: {required: false, type: String, description: "产品条形码, 可以为空, 如果填写 则公司唯一"},
     // img_urls: {required: false, type: Array[String], description: "产品图片"},	// 文件传输

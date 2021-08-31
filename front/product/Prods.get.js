@@ -22,7 +22,7 @@ args = {
 
 	sortKey: {
 		required: false,
-		type: String, // {enum: ["sort", "code", "nome"]},
+		type: String, // {enum: ["sort", "code", "nome", "at_upd", "at_crt"]},
 		default: ["sort", "code"],
 		description: "以什么来排序",
 	},

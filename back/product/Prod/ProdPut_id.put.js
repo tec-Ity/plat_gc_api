@@ -5,7 +5,6 @@ formData = {
 	"obj": {
 		desp: {required: false, type: String, description: "商品描述"},
 		unit: {required: false, type: String, description: "商品单位, 如: 瓶 个 箱 PZ"},
-		Categs: {required: false, type: Array[ObjectId], description: "商品二级分类"},
 		is_festival: {required: false, type: Boolean, default: true, description: "是否为节日商品"},
 		is_hot: {required: false, type: Boolean, default: true, description: "是否热销"},
 		is_usable: {required: false, type: Boolean, default: true, description: "商品是否可用"},
