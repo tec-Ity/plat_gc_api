@@ -13,8 +13,8 @@ note_User: String,
 code: String,								// 只读 产品名称
 // path_crt: Number,						// enum: [1: 'online', 2: 'shop']
 
-type_pay: Number, // enum: ConfOrder,
-bill: {
+type_paid: Number, // enum: ConfOrder,
+paid_info: {
 	firstname: String,
 	lastname: String,
 	company: String,

@@ -13,7 +13,7 @@ email: String,										// opt 管理
 phone: String,										// opt 管理
 
 nome: String,
-type_pay: Number,									// 默认支付方式 为客户自动选择支付方式
+type_paid: Number,									// 默认支付方式 为客户自动选择支付方式
 
 Lang: {type: ObjectId, ref:"Lang"},
 

@@ -128,21 +128,21 @@ res = {
                     "val": "店铺配送"
                 }
             },
-            "type_pay_Arrs": [
+            "type_paid_Arrs": [
                 0,
                 1,
                 2,
                 3,
                 4
             ],
-            "type_pay": {
+            "type_paid": {
                 "0": "货到付款",
                 "1": "strip",
                 "2": "paypal",
                 "3": "wx",
                 "4": "支付宝"
             },
-            "type_pay_obj": {
+            "type_paid_obj": {
                 "cash": {
                     "num": 0,
                     "val": "货到付款"

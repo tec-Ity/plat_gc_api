@@ -1,13 +1,48 @@
 api = "https://example.com/api/v1/ClientPut";
 method = "PUT";
 formData = {
-	// code: {required: false, type: String, description: "账号"},			// 修改账号 暂时不做这个功能 每个用户一年只能修改一次
-	pwd: {required: false, type: String, description: "用户新秘密秘密"},
-	pwdOrg: {required: false, type: String, description: "用户原秘密"},	// 如果是修改秘密 必须输入原密码
+	// "code": {required: false, type: String, description: "账号"},			// 修改账号 暂时不做这个功能 每个用户一年只能修改一次
+	"pwd": {required: false, type: String, description: "用户新秘密秘密"},
+	"pwdOrg": {required: false, type: String, description: "用户原秘密"},	// 如果是修改秘密 必须输入原密码
 
 	"obj": {
 		nome: {required: false, type: String, description: "店铺名称, 公司唯一"},	// 只有总公司管理员以上级别可以修改
-	}
+	},
+    'addr_post': {
+        Cita: {required: true, type: ObjectId, description: "所属城市"},
+
+        firstname: String,
+        lastname: String,
+        company: String,
+        address: String,
+        city: String,
+        state: String,
+        postcode: String,
+        country: String,
+        email: String,
+        phone: String
+    },
+    'addr_put': {
+        _id: {required: true, type: ObjectId, description: "要删除的 地址 _id"},
+
+        Cita: {required: true, type: ObjectId, description: "Cita"},
+
+        firstname: String,
+        lastname: String,
+        company: String,
+        address: String,
+        city: String,
+        state: String,
+        postcode: String,
+        country: String,
+        email: String,
+        phone: String
+    },
+    'addr_sort': {
+        _id: {required: true, type: ObjectId, description: "要删除的 地址 _id"},
+        numTh: {type: true,  type: Number, 想要排在数组第几位}
+    }
+    'addr_del': {required: true, type: ObjectId, description: "要删除的 地址 _id"},
 }
 headers = {
 	'Accept': 'application/json',
