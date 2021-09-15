@@ -7,7 +7,7 @@ formData = {
         "pwdOrg": {required: false, type: String, description: "用户原密码"},   	// 如果是修改密码 必须输入原密码
     },
 
-    "obj": {
+    "general": {
         nome: {required: false, type: String, description: "用户名称"},
     },
     'addr_post': {
