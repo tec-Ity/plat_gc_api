@@ -4,7 +4,7 @@ api = "https://example.com/api/v1/reActive";
 method = "PUT";
 formData = {
 	pwd: {required: true, type: String, description: "账号密码"},			// 防止其他人拿到已登录的账号 篡改激活手机或邮箱
-																		// 如果不记得密码 可以用原手机或邮箱 更新秘密
+																		// 如果不记得密码 可以用原手机或邮箱 更新密码
 
 	otp: {required: true, type: String, description: "手机或邮箱验证码"},
 
