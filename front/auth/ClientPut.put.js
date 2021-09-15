@@ -5,7 +5,7 @@ formData = {
     "password": {
         "pwd": {required: false, type: String, description: "用户新密码"},
         "pwdOrg": {required: false, type: String, description: "用户原密码"},   	// 如果是修改密码 必须输入原密码
-    }
+    },
 
     "obj": {
         nome: {required: false, type: String, description: "用户名称"},
@@ -43,7 +43,7 @@ formData = {
     'addr_sort': {
         _id: {required: true, type: ObjectId, description: "要删除的 地址 _id"},
         numTh: {type: true,  type: Number, 想要排在数组第几位}
-    }
+    },
     'addr_del': {required: true, type: ObjectId, description: "要删除的 地址 _id"},
 }
 headers = {
