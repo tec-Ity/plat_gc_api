@@ -1,6 +1,6 @@
-// 如果此品牌下有产品 则不可被删除
+// 只能删除比当前用户权限小的, 且只有管理者有删除权限
 
-api = "https://example.com/api/b1/BrandDelete/[:id]";
+api = "https://example.com/api/b1/User/[:id]";
 methods = "DELETE",
 formData = null;
 headers = {

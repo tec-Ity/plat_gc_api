@@ -1,6 +1,6 @@
 // 如果此分类下有产品 则不可被删除
 
-api = "https://example.com/api/b1/CategDelete/[:id]";
+api = "https://example.com/api/b1/Categ/[:id]";
 methods = "DELETE",
 formData = null;
 headers = {

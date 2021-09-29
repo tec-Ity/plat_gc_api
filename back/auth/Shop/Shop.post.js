@@ -1,27 +1,35 @@
-api = "https://example.com/api/b1/ShopPut/:id";
-method = "PUT";
-formData = {
-	"obj": {
-		code: {required: false, type: String, description: "店铺编号, 公司唯一"},	// 只有总公司管理员以上级别可以修改
-		nome: {required: false, type: String, description: "店铺名称, 公司唯一"},	// 只有总公司管理员以上级别可以修改
-		Cita: {required: false, type: ObjectId, description: "店铺所属城市"},		// 只有总公司管理员以上级别可以修改, 且serve_Citas中要包含新城市
-		is_usable: {required: false, type: Boolean, description: "店铺是否可用"},	// 只有总公司管理员以上级别可以修改
-		is_boutique: {required: false, type: Boolean, description: "是否为精品店"},	// 只有总公司管理员以上级别可以修改
-		sort: {required: false, type: Number, description: "店铺的排序"},			// 只有总公司管理员以上级别可以修改
+// 只有总公司管理员以上级别可以创建
+api = "https://example.com/api/b1/Shop";
+method = "POST";
+obj: {
+	code: {required: true, type: String, description: "店铺编号, 公司唯一"},
+	nome: {required: true, type: String, description: "店铺名称, 公司唯一"},
+	Cita: {required: true, type: ObjectId, description: "店铺所属城市"},
 
-		addr: {required: false, type: String, description: "店铺地址"},
-		zip: {required: false, type: String, description: "店铺邮编"},
-		img_url: {required: false, type: String, description: "店铺logo"},
-		price_ship: {required: false, type: Float, description: "店铺的本地运费"}
-		// disable
-		serve_Citas: "查看 shop_serveCitas 接口"
-	}
+	is_boutique: {required: false, type: Boolean, default: false, description: "是否为精品店"},
+	is_usable: {required: false, type: Boolean, default: true, description: "店铺是否可用"},
+	addr: {required: false, type: String, description: "店铺地址"},
+	zip: {required: false, type: String, description: "店铺邮编"},
+	img_url: {required: false, type: String, description: "店铺logo"}
 }
+
+// 如果不添加本地图片 建议用这个
+formData = {obj};
+
+// 如果添加本地图片 只能用这个
+// 建议不要使用 fetch 因为其对文件传输不太友好
+formData.append("obj", JSON.stringify(obj));
+formData.append(["file0"], 'file路径0');
+// ...formData.append(["fileN"], 'file路径N');
+
+
 headers = {
 	'Accept': 'application/json',
 	'Content-Type': 'application/json',
 	"authorization": "auth"+" "+accessToken
 }
+
+
 
 // 返回值
 // status(200);

@@ -1,4 +1,4 @@
-api = "https://example.com/api/b1/UserPut/:id";
+api = "https://example.com/api/b1/User/:id";
 method = "PUT";
 formData = {
 	"obj": {

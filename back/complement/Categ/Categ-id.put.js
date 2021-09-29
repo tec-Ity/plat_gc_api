@@ -1,4 +1,4 @@
-api = "https://example.com/api/b1/CategPut/:id";
+api = "https://example.com/api/b1/Categ/:id";
 method = "PUT";
 formData = {
 	"obj": {

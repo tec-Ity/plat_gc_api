@@ -1,18 +1,31 @@
-// 只有总公司管理员以上级别可以创建
-
-api = "https://example.com/api/b1/ShopPost";
-method = "POST";
+api = "https://example.com/api/b1/Shop/:id";
+method = "PUT";
 formData = {
-	"obj": {
-		code: {required: true, type: String, description: "店铺编号, 公司唯一"},
-		nome: {required: true, type: String, description: "店铺名称, 公司唯一"},
-		Cita: {required: true, type: ObjectId, description: "店铺所属城市"},
+	"general": {
+		code: {required: false, type: String, description: "店铺编号, 公司唯一"},	// 只有总公司管理员以上级别可以修改
+		nome: {required: false, type: String, description: "店铺名称, 公司唯一"},	// 只有总公司管理员以上级别可以修改
+		Cita: {required: false, type: ObjectId, description: "店铺所属城市"},		// 只有总公司管理员以上级别可以修改, 且serve_Citas中要包含新城市
+		is_usable: {required: false, type: Boolean, description: "店铺是否可用"},	// 只有总公司管理员以上级别可以修改
+		is_boutique: {required: false, type: Boolean, description: "是否为精品店"},	// 只有总公司管理员以上级别可以修改
+		sort: {required: false, type: Number, description: "店铺的排序"},			// 只有总公司管理员以上级别可以修改
 
-		is_boutique: {required: false, type: Boolean, default: false, description: "是否为精品店"},
-		is_usable: {required: false, type: Boolean, default: true, description: "店铺是否可用"},
 		addr: {required: false, type: String, description: "店铺地址"},
 		zip: {required: false, type: String, description: "店铺邮编"},
-		img_url: {required: false, type: String, description: "店铺logo"}
+		img_url: {required: false, type: String, description: "店铺logo"},
+		price_ship: {required: false, type: Float, description: "店铺的本地运费"}
+		// disable
+		serve_Citas: "查看 shop_serveCitas 接口"
+	},
+	"serveCitaPost": {
+		Cita: {required: true, type: ObjectId, description: "服务城市"},
+		price_ship: {required: true, type: Float, description: "额外运费"}
+	},
+	"serveCitaPut": {
+		_id: {required: true, type: ObjectId, description: "此服务城市对象的 _id, 不是Cita的_id"}
+		price_ship: {required: true, type: Float, description: "额外运费"}
+	},
+	"serveCitaDelete": {
+		Cita: {required: true, type: ObjectId, description: "删除服务城市 Cita的_id"}
 	}
 }
 headers = {
@@ -20,8 +33,6 @@ headers = {
 	'Content-Type': 'application/json',
 	"authorization": "auth"+" "+accessToken
 }
-
-
 
 // 返回值
 // status(200);

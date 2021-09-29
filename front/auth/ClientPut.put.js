@@ -1,14 +1,14 @@
 api = "https://example.com/api/v1/ClientPut";
 method = "PUT";
 formData = {
+    "general": {
+        nome: {required: false, type: String, description: "用户名称"},
+    },
+
     // "code": {required: false, type: String, description: "账号"},			// 修改账号 暂时不做这个功能 每个用户一年只能修改一次
     "password": {
         "pwd": {required: false, type: String, description: "用户新密码"},
         "pwdOrg": {required: false, type: String, description: "用户原密码"},   	// 如果是修改密码 必须输入原密码
-    },
-
-    "general": {
-        nome: {required: false, type: String, description: "用户名称"},
     },
     'addr_post': {
         Cita: {required: true, type: ObjectId, description: "所属城市"},
@@ -25,7 +25,7 @@ formData = {
         phone: String
     },
     'addr_put': {
-        _id: {required: true, type: ObjectId, description: "要删除的 地址 _id"},
+        _id: {required: true, type: ObjectId, description: "要修改的 地址 _id"},
 
         Cita: {required: true, type: ObjectId, description: "Cita"},
 
@@ -42,10 +42,10 @@ formData = {
     },
     'addr_sort': {
         _id: {required: true, type: ObjectId, description: "要删除的 地址 _id"},
-        numTh: {type: true,  type: Number, 想要排在数组第几位}
+        numTh: {type: false,  type: Number, default: 1, description: "想要排在数组第几位"},
     },
     'addr_del': {required: true, type: ObjectId, description: "要删除的 地址 _id"},
-}
+};
 headers = {
 	'Accept': 'application/json',
 	'Content-Type': 'application/json',

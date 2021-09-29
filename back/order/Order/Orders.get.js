@@ -1,4 +1,4 @@
-api = "https://example.com/api/v1/Orders";
+api = "https://example.com/api/b1/Orders";
 query = "?"+["&[key in args]=[args[key]]"],
 /* 
     "EX_url": [

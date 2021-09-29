@@ -1,6 +1,6 @@
 // 只有总公司管理员以上级别可以创建
 
-api = "https://example.com/api/b1/BrandPost";
+api = "https://example.com/api/b1/Brand";
 method = "POST";
 formData = {
     "obj": {
