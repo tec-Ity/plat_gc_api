@@ -1,4 +1,4 @@
-api = "https://example.com/api/b1/PdPut_ImgPut/:id";
+api = "https://example.com/api/b1/Pd_ImgPut/:id";
 method = "PUT";
 formData = {
     "putObj" = {

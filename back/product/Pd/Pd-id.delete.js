@@ -1,6 +1,6 @@
-// 如果 product 中有此属性 则不可删除
+// 只有总公司管理员以上级别可以创建
 
-api = "https://example.com/api/b1/AttrDelete/[:id]";
+api = "https://example.com/api/b1/Pd/[:id]";
 methods = "DELETE",
 formData = null;
 headers = {

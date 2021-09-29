@@ -1,7 +1,7 @@
 // 只有总公司管理员以上级别可以创建
 // fetch 出错 暂时没有解决
 
-api = "https://example.com/api/b1/PdPost";
+api = "https://example.com/api/b1/Pd";
 method = "POST";
 formData = new formData();
 [formData.append("file_"+i, image_File)];

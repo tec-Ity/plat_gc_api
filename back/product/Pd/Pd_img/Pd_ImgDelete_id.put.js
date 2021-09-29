@@ -1,4 +1,4 @@
-api = "https://example.com/api/b1/PdPut_ImgDelete/:id";
+api = "https://example.com/api/b1/Pd_ImgDelete/:id";
 method = "PUT";
 formData = {
 	"delObj": {

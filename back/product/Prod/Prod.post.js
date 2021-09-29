@@ -1,6 +1,6 @@
 // 只有总公司管理员以上级别可以创建
 
-api = "https://example.com/api/b1/ProdPost";
+api = "https://example.com/api/b1/Prod";
 method = "POST";
 formData = {
 	Pd: {required: true, type: ObjectId, description: "商品所属产品"},

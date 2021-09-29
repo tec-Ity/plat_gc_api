@@ -1,4 +1,4 @@
-api = "https://example.com/api/b1/AttrPost";
+api = "https://example.com/api/b1/Attr";
 method = "POST";
 formData = {
     "obj": {

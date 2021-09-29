@@ -1,6 +1,6 @@
 // 只有总公司管理员以上级别可以创建
 
-api = "https://example.com/api/b1/PdDelete/[:id]";
+api = "https://example.com/api/b1/Sku/[:id]";
 methods = "DELETE",
 formData = null;
 headers = {
