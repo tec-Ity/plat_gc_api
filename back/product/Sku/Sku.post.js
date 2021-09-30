@@ -1,6 +1,6 @@
 // 只有总公司管理员以上级别可以创建
 
-api = "https://example.com/api/b1/SkuPost";
+api = "https://example.com/api/b1/Sku";
 method = "POST";
 formData = {
     "obj": {
