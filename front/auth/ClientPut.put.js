@@ -11,34 +11,24 @@ formData = {
         "pwdOrg": {required: false, type: String, description: "用户原密码"},   	// 如果是修改密码 必须输入原密码
     },
     'addr_post': {
-        Cita: {required: true, type: ObjectId, description: "所属城市"},
+        Cita: {required: true, type: ObjectId / String, description: "所属城市, 如果是String 必须是两个字符"},
 
-        firstname: String,
-        lastname: String,
-        company: String,
-        address: String,
-        city: String,
-        state: String,
-        postcode: String,
-        country: String,
-        email: String,
-        phone: String
+        name: {required: true, type: String, description: "收货人名字"},
+        address: {required: true, type: String, description: "收货人地址"},
+        postcode: {required: true, type: String, description: "收货人邮编"},
+        phone: {required: true, type: String, description: "收货人电话"},
+        note: {required: false, type: String, description: "备注： 如 楼层/门铃"}
     },
     'addr_put': {
         _id: {required: true, type: ObjectId, description: "要修改的 地址 _id"},
 
-        Cita: {required: true, type: ObjectId, description: "Cita"},
+        Cita: {required: true, type: ObjectId / String, description: "Cita, 如果是String 必须是两个字符"},
 
-        firstname: String,
-        lastname: String,
-        company: String,
-        address: String,
-        city: String,
-        state: String,
-        postcode: String,
-        country: String,
-        email: String,
-        phone: String
+        name: {required: true, type: String, description: "收货人名字"},
+        address: {required: true, type: String, description: "收货人地址"},
+        postcode: {required: true, type: String, description: "收货人邮编"},
+        phone: {required: true, type: String, description: "收货人电话"},
+        note: {required: false, type: String, description: "备注： 如 楼层/门铃"}
     },
     'addr_sort': {
         _id: {required: true, type: ObjectId, description: "要删除的 地址 _id"},
