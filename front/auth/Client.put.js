@@ -1,4 +1,4 @@
-api = "https://example.com/api/v1/ClientPut";
+api = "https://example.com/api/v1/Client";
 method = "PUT";
 formData = {
     "general": {
