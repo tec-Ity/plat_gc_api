@@ -1,4 +1,4 @@
-api = "https://example.com/api/b1/Categ_ImgPut/:id";
+api = "https://example.com/api/b1/Categ_ImgPost/:id";
 method = "PUT";
 formData = new formData();
 formData.append("file", image_File);
