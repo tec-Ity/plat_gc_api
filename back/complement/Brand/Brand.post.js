@@ -2,20 +2,28 @@
 
 api = "https://example.com/api/b1/Brand";
 method = "POST";
-formData = {
-    "obj": {
-        code: {required: true, type: String, description: "品牌编号, 公司唯一"},
-        nome: {required: true, type: String, description: "品牌名称, 公司唯一"},
-
-        Nation: {required: false, type: ObjectId, description: "品牌所属国家"},
-        img_url: {required: false, type: String, description: "品牌logo"}
-    }
-}
 headers = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
     "authorization": "auth"+" "+accessToken
 }
+
+"obj": {
+    code: {required: true, type: String, description: "品牌编号, 公司唯一"},
+    nome: {required: true, type: String, description: "品牌名称, 公司唯一"},
+
+    Nation: {required: false, type: ObjectId, description: "品牌所属国家"},
+    img_url: {required: false, type: String, description: "品牌logo"}
+}
+
+// 如果不添加本地图片 建议直接传数据
+formData = { obj }
+
+// 如果添加本地图片 要用下面的
+formData = new formData();
+[formData.append("file_"+i, image_File)];   // formData.append(["file0"], 'file路径0');
+formData.append("obj", JSON.stringify(obj));
+
 
 
 // 返回值

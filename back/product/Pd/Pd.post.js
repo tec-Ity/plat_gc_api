@@ -3,9 +3,13 @@
 
 api = "https://example.com/api/b1/Pd";
 method = "POST";
-formData = new formData();
-[formData.append("file_"+i, image_File)];
-formData.append("obj", JSON.stringify(obj));
+headers = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+    "authorization": "auth"+" "+accessToken
+}
+
+
 obj = {
     nome: {required: true, type: String, description: "产品名称"},
     Nation: {required: true, type: ObjectId, description: "产品所属国家"},
@@ -19,11 +23,17 @@ obj = {
     is_usable: {required: false, type: Boolean, default: true, description: "产品是否可用"},
     sort: {required: false, type: Number, default: 0, description: "产品排序"}
 }
-headers = {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json',
-    "authorization": "auth"+" "+accessToken
-}
+
+// 如果不添加本地图片 建议用这个
+formData = {obj};
+
+// 如果添加本地图片 只能用这个
+// 建议不要使用 fetch 因为其对文件传输不太友好
+formData = new formData();
+formData.append("obj", JSON.stringify(obj));
+[formData.append("file_"+i, image_File)];   // formData.append(["file0"], 'file路径0');
+
+
 
 // 返回值
 // status(200);

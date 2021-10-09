@@ -1,6 +1,12 @@
 // 只有总公司管理员以上级别可以创建
 api = "https://example.com/api/b1/Shop";
 method = "POST";
+headers = {
+	'Accept': 'application/json',
+	'Content-Type': 'application/json',
+	"authorization": "auth"+" "+accessToken
+}
+
 obj: {
 	code: {required: true, type: String, description: "店铺编号, 公司唯一"},
 	nome: {required: true, type: String, description: "店铺名称, 公司唯一"},
@@ -18,16 +24,10 @@ formData = {obj};
 
 // 如果添加本地图片 只能用这个
 // 建议不要使用 fetch 因为其对文件传输不太友好
+formData = new formData();
 formData.append("obj", JSON.stringify(obj));
-formData.append(["file0"], 'file路径0');
-// ...formData.append(["fileN"], 'file路径N');
+[formData.append("file_"+i, image_File)];	// formData.append(["file0"], 'file路径0');
 
-
-headers = {
-	'Accept': 'application/json',
-	'Content-Type': 'application/json',
-	"authorization": "auth"+" "+accessToken
-}
 
 
 

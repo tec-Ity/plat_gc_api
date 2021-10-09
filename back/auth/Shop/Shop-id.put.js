@@ -1,38 +1,49 @@
 api = "https://example.com/api/b1/Shop/:id";
 method = "PUT";
-formData = {
-	"general": {
-		code: {required: false, type: String, description: "店铺编号, 公司唯一"},	// 只有总公司管理员以上级别可以修改
-		nome: {required: false, type: String, description: "店铺名称, 公司唯一"},	// 只有总公司管理员以上级别可以修改
-		Cita: {required: false, type: ObjectId, description: "店铺所属城市"},		// 只有总公司管理员以上级别可以修改, 且serve_Citas中要包含新城市
-		is_usable: {required: false, type: Boolean, description: "店铺是否可用"},	// 只有总公司管理员以上级别可以修改
-		is_boutique: {required: false, type: Boolean, description: "是否为精品店"},	// 只有总公司管理员以上级别可以修改
-		sort: {required: false, type: Number, description: "店铺的排序"},			// 只有总公司管理员以上级别可以修改
-
-		addr: {required: false, type: String, description: "店铺地址"},
-		zip: {required: false, type: String, description: "店铺邮编"},
-		img_url: {required: false, type: String, description: "店铺logo"},
-		price_ship: {required: false, type: Float, description: "店铺的本地运费"}
-		// disable
-		serve_Citas: "查看 shop_serveCitas 接口"
-	},
-	"serveCitaPost": {
-		Cita: {required: true, type: ObjectId, description: "服务城市"},
-		price_ship: {required: true, type: Float, description: "额外运费"}
-	},
-	"serveCitaPut": {
-		_id: {required: true, type: ObjectId, description: "此服务城市对象的 _id, 不是Cita的_id"}
-		price_ship: {required: true, type: Float, description: "额外运费"}
-	},
-	"serveCitaDelete": {
-		Cita: {required: true, type: ObjectId, description: "删除服务城市 Cita的_id"}
-	}
-}
 headers = {
 	'Accept': 'application/json',
 	'Content-Type': 'application/json',
 	"authorization": "auth"+" "+accessToken
 }
+
+general: {
+	code: {required: false, type: String, description: "店铺编号, 公司唯一"},	// 只有总公司管理员以上级别可以修改
+	nome: {required: false, type: String, description: "店铺名称, 公司唯一"},	// 只有总公司管理员以上级别可以修改
+	Cita: {required: false, type: ObjectId, description: "店铺所属城市"},		// 只有总公司管理员以上级别可以修改, 且serve_Citas中要包含新城市
+	is_usable: {required: false, type: Boolean, description: "店铺是否可用"},	// 只有总公司管理员以上级别可以修改
+	is_boutique: {required: false, type: Boolean, description: "是否为精品店"},	// 只有总公司管理员以上级别可以修改
+	sort: {required: false, type: Number, description: "店铺的排序"},			// 只有总公司管理员以上级别可以修改
+
+	addr: {required: false, type: String, description: "店铺地址"},
+	zip: {required: false, type: String, description: "店铺邮编"},
+	img_url: {required: false, type: String, description: "店铺logo"},
+	price_ship: {required: false, type: Float, description: "店铺的本地运费"}
+	// disable
+	serve_Citas: "查看 shop_serveCitas 接口"
+}
+serveCitaPost: {
+	Cita: {required: true, type: ObjectId, description: "服务城市"},
+	price_ship: {required: true, type: Float, description: "额外运费"}
+}
+serveCitaPut: {
+	_id: {required: true, type: ObjectId, description: "此服务城市对象的 _id, 不是Cita的_id"}
+	price_ship: {required: true, type: Float, description: "额外运费"}
+}
+serveCitaDelete: {
+	Cita: {required: true, type: ObjectId, description: "删除服务城市 Cita的_id"}
+}
+// 如果不添加本地图片 建议直接传数据 选择修改的类型
+formData = { general };
+formData = { serveCitaPost };
+formData = { serveCitaPut };
+formData = { serveCitaDelete };
+
+// 如果添加本地图片 要用这个 图片只能与 基本信息一起修改 不能与服务城市一起修改
+formData = new formData();
+formData.append("obj", JSON.stringify(general));
+[formData.append("file_"+i, image_File)];	// formData.append(["file0"], 'file路径0');
+
+
 
 // 返回值
 // status(200);

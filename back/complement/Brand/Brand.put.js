@@ -1,21 +1,29 @@
 api = "https://example.com/api/b1/Brand/:id";
 method = "PUT";
-formData = {
-    "obj": {
-        code: {required: false, type: String, description: "品牌编号, 公司唯一"},
-        nome: {required: false, type: String, description: "品牌名称, 公司唯一"},
-        Nation: {required: false, type: ObjectId, description: "品牌所属国家"},
-        is_usable: {required: false, type: Boolean, description: "品牌是否可用"},
-        sort: {required: false, type: Number, description: "品牌的排序"},
-        img_url: {required: false, type: String, description: "品牌logo"},
-        Firm: "为只读",
-    }
-}
 headers = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
     "authorization": "auth"+" "+accessToken
 }
+
+general: {
+    code: {required: false, type: String, description: "品牌编号, 公司唯一"},
+    nome: {required: false, type: String, description: "品牌名称, 公司唯一"},
+    Nation: {required: false, type: ObjectId, description: "品牌所属国家"},
+    is_usable: {required: false, type: Boolean, description: "品牌是否可用"},
+    sort: {required: false, type: Number, description: "品牌的排序"},
+    img_url: {required: false, type: String, description: "品牌logo"},
+    Firm: "为只读",
+}
+
+// 如果不添加本地图片 建议直接传数据
+formData = { general }
+
+// 如果添加本地图片 要用下面的
+formData = new formData();
+[formData.append("file_"+i, image_File)];   // formData.append(["file0"], 'file路径0');
+formData.append("obj", JSON.stringify(general));
+
 
 
 
