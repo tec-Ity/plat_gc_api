@@ -1,7 +1,13 @@
 api = "https://example.com/api/b1/User/:id";
 method = "PUT";
 formData = {
-	"obj": {
+	"password": {
+        pwd: {required: true, type: String, description: "用户密码"},
+        pwdConfirm: {required: true, type: String, description: "用户确认密码"},
+        pwdOrg: {required: false, type: String, description: "用户原密码"}, // 管理者可以不需要 直接修改, 本人修改需要原密码
+
+    },
+	"general": {
 		Shop: {required: false, type: ObjectId, description: "员工所属城市"},		// 只有总公司管理员以上级别可以修改
 
 		code: {required: false, type: String, description: "用户编号, 系统唯一"},	// 管理者可以修改
@@ -12,7 +18,6 @@ formData = {
 		role: {required: false, type: Number, description: "员工的排序"},			// 管理者可以修改
 		sort: {required: false, type: Number, description: "员工的排序"},			// 管理者可以修改
 
-		pwd: {required: false, type: String, description: "用户密码"},			// 管理者可以修改, 本人修改需要原密码
 		// disable
 		Firm: "为只读",
 		User_crt: "为只读",
