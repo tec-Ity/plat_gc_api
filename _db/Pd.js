@@ -1,7 +1,3 @@
-// 公司产品库
-// 总公司可以 添加 修改 删除
-// 分部只可以同步到商品信息
-
 /* 强制 完全相同 */
 code: String, 								// 条形号码
 nome: String,								// 产品名称
@@ -13,16 +9,17 @@ Categ: {type: ObjectId, ref: 'Categ'},
 
 /* 同步 可修改 */
 desp: String,
-unit: String,
+unit: String,								// 单位
 langs: [{
 	Lang: {type: ObjectId, ref: 'Lang'},	// 如果为空 则为默认值
+	nome: String,
 	desp: String, 							// 描述
 	unit: String,							// 单位
 }],
 // Tags: [{type: ObjectId, ref: 'Tag'}],
 sort: Number,
-price_regular: Float,							// 默认价格 sku一般同步此价格
-//  (is_usable_Firm == 0) && (is_usable = 0); 
+price_regular: Float,							// 默认价格 Product 一般同步此价格
+// (is_usable_Firm == 0) && (is_usable = 0); 
 is_usable: { type: Boolean, default: true },	// 只是不能被同步, 已经被同步的商品 不受此字段影响
 
 /* 只读 */

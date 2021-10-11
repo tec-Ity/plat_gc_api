@@ -10,6 +10,7 @@ general: {
 	code: {required: false, type: String, description: "店铺编号, 公司唯一"},	// 只有总公司管理员以上级别可以修改
 	nome: {required: false, type: String, description: "店铺名称, 公司唯一"},	// 只有总公司管理员以上级别可以修改
 	Cita: {required: false, type: ObjectId, description: "店铺所属城市"},		// 只有总公司管理员以上级别可以修改, 且serve_Citas中要包含新城市
+	is_main: {required: false, type: Boolean, description: "是否为主店 整个公司只能有一个主店"},	// 只有总公司管理员以上级别可以修改
 	is_usable: {required: false, type: Boolean, description: "店铺是否可用"},	// 只有总公司管理员以上级别可以修改
 	is_boutique: {required: false, type: Boolean, description: "是否为精品店"},	// 只有总公司管理员以上级别可以修改
 	sort: {required: false, type: Number, description: "店铺的排序"},			// 只有总公司管理员以上级别可以修改

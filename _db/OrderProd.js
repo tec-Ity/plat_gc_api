@@ -8,10 +8,9 @@ unit: String,										// 只读
 OrderSkus: [{type: ObjectId, ref: "OrderSku"}],		// 只读
 
 // 由 Sku决定的信息
-// quantity: {type:Number, default: 0}, 				// 只读 采购本条目总数
-// tot: {type:Float, default: 0},						// 只读 本条目总价
-// tot_regular: {type:Float, default: 0},				// 只读 总原价
-// tot_discout: {type:Float, default: 0},				// 只读 本条目降价额度 = tot_regular - tot_Orditem
+prod_quantity: {type:Number, default: 0},			// 只读 采购本条目总数
+prod_sale: {type:Float, default: 0},				// 只读 本条目总价
+prod_regular: {type:Float, default: 0},				// 只读 总原价
 
 // 额外信息
 Pd: {type: ObjectId, ref: "Pd"},					// 只读 所属产品

@@ -1,4 +1,4 @@
-level: Number, 									// 只读  	enum: [1, 2];
+level: Number, 									// 只读	enum: [1, 2];
 Categ_far: {type: ObjectId, ref: 'Categ'},
 Categ_sons: [{type: ObjectId, ref: 'Categ'}],	// 只读
 

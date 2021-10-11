@@ -4,7 +4,7 @@ code: {			// 大区简称 LOM TOS LAZ
 	unique: true,
 },
 nome: String,
-
+img_url: String,
 langs: [{
 	Lang: {type: ObjectId, ref: 'Lang'},	// 如果为空 则为默认值
 	desp: String,

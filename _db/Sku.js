@@ -1,14 +1,14 @@
 Pd: {type: ObjectId, ref: 'Pd'},		// 只读
 Prod: {type: ObjectId, ref: 'Prod'},	// 只读
 
-attrs: [{								// 只读
+attrs: [{
 	nome: String,
 	option: String
 }],
 
 price_regular: Float,
 price_sale: Float,
-is_discount: Boolean, // 只读  if true 控制 Prod
+is_discount: Boolean, // 只读 if true 控制 Prod
 
 // at_fromSale: Date,
 // at_toSale: Date,
@@ -18,16 +18,16 @@ limit_quantity: {type: Number, default: 0},
 Records: [{type: ObjectId, ref: 'Record'}],
 Batchs: [{type: ObjectId, ref: 'Batch'}],
 
-is_controlStock: {type: Boolean, default: false},
+is_controlStock: {type: Boolean, default: true},
 
 quantity: Number,
 quantity_alert: Number,
-is_alert: Boolean, // 只读   if true 控制 Prod
+is_alert: Boolean, // 只读 if true 控制 Prod
 
 allow_backorder: {type: Boolean, default: true},
 
-is_usable: Boolean,
-is_sell: Boolean, 							// 只读	if false 控制 Prod
+is_usable: {type: Boolean, default: true }, 
+is_sell: Boolean, 							// 只读
 
 User_crt: {type: ObjectId, ref: 'User'},	// 只读
 User_upd: {type: ObjectId, ref: 'User'},	// 只读

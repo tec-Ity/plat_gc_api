@@ -13,25 +13,20 @@ email: String,										// opt 管理
 phone: String,										// opt 管理
 
 nome: String,
-type_paid: Number,									// 默认支付方式 为客户自动选择支付方式
 
+type_paid: Number,									// 默认支付方式 为客户自动选择支付方式
 Lang: {type: ObjectId, ref:"Lang"},
 
 addrs: [{
 	Cita: {type: ObjectId, ref: "Cita"},
 
-	firstname: String,
-	lastname: String,
-	company: String,
+	name: String,
+	// company: String,
 	address: String,
-	city: String,
-	state: String,
 	postcode: String,
-	country: String,
-	email: String,
-	phone: String
+	phone: String,
+	note: String,
 }],
-
 
 is_active: Boolean, 								// 只读
 is_usable: { type: Boolean, default: true },		// 平台管理员
