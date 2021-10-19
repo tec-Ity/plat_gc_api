@@ -1,6 +1,6 @@
 api = "https://example.com/api/b1/Attr/:id";
 method = "PUT";
-formData = {
+formData = {		// 可同时修改
 	"general": {
 		nome: {required: false, type: String, description: "商品属性名称"},
 		sort: {required: false, type: Number, description: "商品属性排序"},

@@ -8,13 +8,15 @@ headers = {
     "authorization": "auth"+" "+accessToken
 }
 
-"obj": {
+
+obj = {
     code: {required: true, type: String, description: "品牌编号, 公司唯一"},
     nome: {required: true, type: String, description: "品牌名称, 公司唯一"},
 
     Nation: {required: false, type: ObjectId, description: "品牌所属国家"},
     img_url: {required: false, type: String, description: "品牌logo"}
 }
+
 
 // 如果不添加本地图片 建议直接传数据
 formData = { obj }

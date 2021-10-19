@@ -1,5 +1,5 @@
 ,api = "https://example.com/api/b1/Attrs";
-query = "?"+["&[key in args]=[args[key]]"],
+query = "?"+["&[key in args]=[args[key]]"];
 /* 
     "EX_url": [
         api+"?search=N",
@@ -7,12 +7,12 @@ query = "?"+["&[key in args]=[args[key]]"],
     ],
 */
 methods = "GET";
-formData = null;
 headers = {
     'Accept': 'application/json',
     'Content-Type': 'application/json'
     "authorization": "auth"+" "+accessToken
-}
+};
+formData = null;
 
 args = {
 	Prod: {required: true, type: ObjectId, description: "找出相应商品下的所有商品属性"},

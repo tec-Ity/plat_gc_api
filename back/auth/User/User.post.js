@@ -2,24 +2,28 @@
 
 api = "https://example.com/api/b1/User";
 method = "POST";
-formData = {
-    "obj": {
-        code: {required: true, type: String, description: "用户账户, 系统唯一"},
-        pwd: {required: true, type: String, description: "用户密码"},
-
-        role: {required: true, type: Number, description: "用户密码"},
-        Shop: {required: role>100?true:false, type: ObjectId, description: "所属分店"},
-
-        nome: {required: false, type: String, description: "员工名字"},
-        phonePre: {required: false, type: String, description: "电话前缀"},
-        phone: {required: false, type: String, description: "员工电话"},
-    }
-}
 headers = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
     "authorization": "auth"+" "+accessToken
 }
+
+
+obj = {
+    code: {required: true, type: String, description: "用户账户, 系统唯一"},
+    pwd: {required: true, type: String, description: "用户密码"},
+
+    role: {required: true, type: Number, description: "用户密码"},
+    Shop: {required: role>100?true:false, type: ObjectId, description: "所属分店"},
+
+    nome: {required: false, type: String, description: "员工名字"},
+    phonePre: {required: false, type: String, description: "电话前缀"},
+    phone: {required: false, type: String, description: "员工电话"},
+}
+
+
+formData = { obj };
+
 
 // 返回值
 // status(200);

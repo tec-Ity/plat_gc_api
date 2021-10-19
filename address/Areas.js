@@ -1,6 +1,6 @@
 api = "https://example.com/api/b1/Areas";
 api = "https://example.com/api/v1/Areas";
-query = "?"+["&[key in args]=[args[key]]"],
+query = "?"+["&[key in args]=[args[key]]"];
 /* 
     "EX_url": [
         api+"?search=N",
@@ -8,12 +8,12 @@ query = "?"+["&[key in args]=[args[key]]"],
     ],
 */
 methods = "GET";
-formData = null;
 headers = {
     'Accept': 'application/json',
     'Content-Type': 'application/json'
     "authorization": "auth"+" "+accessToken
-}
+};
+formData = null;
 
 args = {
     pagesize: {required: false, type: Number, default: 50, description: "设置每页显示几条数据"},

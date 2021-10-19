@@ -7,7 +7,8 @@ headers = {
 	"authorization": "auth"+" "+accessToken
 }
 
-obj: {
+
+obj = {
 	code: {required: true, type: String, description: "店铺编号, 公司唯一"},
 	nome: {required: true, type: String, description: "店铺名称, 公司唯一"},
 	Cita: {required: true, type: ObjectId, description: "店铺所属城市"},
@@ -19,8 +20,9 @@ obj: {
 	img_url: {required: false, type: String, description: "店铺logo"}
 }
 
+
 // 如果不添加本地图片 建议用这个
-formData = {obj};
+formData = { obj };
 
 // 如果添加本地图片 只能用这个
 // 建议不要使用 fetch 因为其对文件传输不太友好

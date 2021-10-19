@@ -6,7 +6,7 @@ headers = {
     "authorization": "auth"+" "+accessToken
 }
 
-general: {
+general = {
     code: {required: false, type: String, description: "品牌编号, 公司唯一"},
     nome: {required: false, type: String, description: "品牌名称, 公司唯一"},
     Nation: {required: false, type: ObjectId, description: "品牌所属国家"},

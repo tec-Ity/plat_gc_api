@@ -6,7 +6,8 @@ headers = {
 	"authorization": "auth"+" "+accessToken
 }
 
-general: {
+
+general = {
 	code: {required: false, type: String, description: "店铺编号, 公司唯一"},	// 只有总公司管理员以上级别可以修改
 	nome: {required: false, type: String, description: "店铺名称, 公司唯一"},	// 只有总公司管理员以上级别可以修改
 	Cita: {required: false, type: ObjectId, description: "店铺所属城市"},		// 只有总公司管理员以上级别可以修改, 且serve_Citas中要包含新城市
@@ -22,17 +23,19 @@ general: {
 	// disable
 	serve_Citas: "查看 shop_serveCitas 接口"
 }
-serveCitaPost: {
+serveCitaPost = {
 	Cita: {required: true, type: ObjectId, description: "服务城市"},
 	price_ship: {required: true, type: Float, description: "额外运费"}
 }
-serveCitaPut: {
+serveCitaPut = {
 	_id: {required: true, type: ObjectId, description: "此服务城市对象的 _id, 不是Cita的_id"}
 	price_ship: {required: true, type: Float, description: "额外运费"}
 }
-serveCitaDelete: {
+serveCitaDelete = {
 	Cita: {required: true, type: ObjectId, description: "删除服务城市 Cita的_id"}
 }
+
+
 // 如果不添加本地图片 建议直接传数据 选择修改的类型
 formData = { general };
 formData = { serveCitaPost };

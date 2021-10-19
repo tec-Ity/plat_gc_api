@@ -2,12 +2,12 @@
 
 api = "https://example.com/api/b1/User/[:id]";
 methods = "GET";
-formData = null;
 headers = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
     "authorization": "auth"+" "+accessToken
 }
+formData = null;
 
 // 返回值
 // status(200);

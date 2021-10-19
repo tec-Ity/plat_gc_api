@@ -1,13 +1,13 @@
 // 只有总公司管理员以上级别可以创建
 
 api = "https://example.com/api/b1/Pd/[:id]";
-methods = "DELETE",
-formData = null;
+methods = "DELETE";
 headers = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
     "authorization": "auth"+" "+accessToken
-}
+};
+formData = null;
 
 
 // 返回值

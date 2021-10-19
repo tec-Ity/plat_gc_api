@@ -1,13 +1,13 @@
 // 如果此品牌下有产品 则不可被删除
 
 api = "https://example.com/api/b1/Brand/[:id]";
-methods = "DELETE",
-formData = null;
+methods = "DELETE";
 headers = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
     "authorization": "auth"+" "+accessToken
-}
+};
+formData = null;
 
 
 // 返回值
