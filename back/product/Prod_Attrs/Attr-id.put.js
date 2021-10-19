@@ -6,14 +6,13 @@ formData = {
 		sort: {required: false, type: Number, description: "商品属性排序"},
 	},
 	"optionPost": {
-		option: {required: true, type: String, description: "新增商品属性值"},
-		sort: {required: false, type: Number, default: 0, description: "新增商品属性值的排序"},
+		options: {required: true, type: String, description: "新增商品属性值"},	// 以逗号分割
 	},
-	"optionPut": {
+	"optionPuts": [{
 		option: {required: true, type: String, description: "需要修改的商品属性值"},
 		optionPut: {required: false, type: String, description: "修改为新的商品属性值"},
 		sort: {required: false, type: Number, description: "修改商品属性值的排序"},
-	},
+	}],
 	"optionDelete": {
 		options: {required: true, type: Array[String], description: "要删除的 商品属性值"}
 	}
