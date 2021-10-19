@@ -2,7 +2,7 @@ api = "https://example.com/api/b1/Prod/:id";
 method = "PUT";
 
 formData = {
-	"obj": {
+	"general": {
 		desp: {required: false, type: String, description: "商品描述"},
 		unit: {required: false, type: String, description: "商品单位, 如: 瓶 个 箱 PZ"},
 		is_festival: {required: false, type: Boolean, default: true, description: "是否为节日商品"},

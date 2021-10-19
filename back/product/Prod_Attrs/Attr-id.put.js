@@ -4,8 +4,6 @@ formData = {
 	"general": {
 		nome: {required: false, type: String, description: "商品属性名称"},
 		sort: {required: false, type: Number, description: "商品属性排序"},
-
-		options: "如果修改 options 则查看 AttrPut_option 接口"
 	},
 	"optionPost": {
 		option: {required: true, type: String, description: "新增商品属性值"},
