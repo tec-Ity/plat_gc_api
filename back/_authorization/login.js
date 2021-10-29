@@ -3,8 +3,10 @@
 api = "https://example.com/api/b1/login";
 method = "POST";
 formData = {
-	code: {required: true, type: String, description: "用户账号"},	
-	pwd: {required: true, type: String, description: "用户密码"}
+	"system": {
+        code: {required: false, type: String, description: "用户账号"},
+        pwd: {required: true, type: String, description: "用户密码"}
+    },
 }
 headers = null;
 

@@ -1,7 +1,15 @@
 api = "https://example.com/api/b1/Sku/:id";
 method = "PUT";
+headers = {
+	'Accept': 'application/json',
+	'Content-Type': 'application/json',
+	"authorization": "auth"+" "+accessToken
+};
+
+
+
 formData = {
-	"obj": {
+	"general": {
 		attrs: [{
 			nome: String,
 			option: String
@@ -16,12 +24,7 @@ formData = {
 		quantity_alert: {required: false, type: Number, description: "商品库存警戒值"},
 		is_usable: {required: false, type: Boolean, description: "是否可用"}
 	}
-}
-headers = {
-	'Accept': 'application/json',
-	'Content-Type': 'application/json',
-	"authorization": "auth"+" "+accessToken
-}
+};
 
 
 // 返回值

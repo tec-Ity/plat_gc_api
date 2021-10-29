@@ -5,9 +5,8 @@ method = "PUT";
 general = {
 	note_Client: {required: false, type: ObjectId, description: "客户备注"},
 	type_paid: {required: false, type: ObjectId, description: "付款方式"},
-	type_ship: {required: false, type: ObjectId, description: "运输方式"},
 }
-ship = {
+paid_info = {
 	Cita: {required: true, type: ObjectId, description: "送达城市"},
 	
 	firstname: String,
@@ -24,7 +23,7 @@ ship = {
 
 
 formData = { general };
-formData = { ship };
+formData = { paid_info };
 
 headers = {
 	'Accept': 'application/json',
