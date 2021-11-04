@@ -1,6 +1,4 @@
-api = "https://example.com/api/v1/webhook";
-method = "POST";
-
+// stripe 系统 需要的 接口 与前端无关
 /*
 	stripe Dashboard 
 	developer
@@ -15,6 +13,12 @@ method = "POST";
 	stripe listen
 
 */
+
+
+api = "https://example.com/api/v1/webhook";
+method = "POST";
+
+
 
 
 // 返回值

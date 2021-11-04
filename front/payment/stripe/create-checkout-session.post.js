@@ -1,7 +1,10 @@
+// stripe 付款
 api = "https://example.com/api/v1/create-checkout-session";
 method = "POST";
 formData = {
-	"OrderId": {required: true, type: ObjectId, description: "如果有, 可能是重新下单 或再来一单, 传递给后端生成新的订单后 可以删除原来取消或失败的订单"},
+	"OrderId": {required: true, type: ObjectId, description: "所要付款订单的 _id"},
+	"success_url": {required: true, type: String, description: "付款成功跳转的页面"},
+	"cancel_url": {required: true, type: String, description: "付款失败跳转的页面"},
 }
 
 headers = {

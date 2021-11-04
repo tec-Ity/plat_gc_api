@@ -1,3 +1,5 @@
+// paypal付款成功后, 再此把 paypal_orderId 和 订单_id 给后端验证 以改变订单状态
+
 api = "https://example.com/api/v1/check-order";
 method = "POST";
 formData = {
