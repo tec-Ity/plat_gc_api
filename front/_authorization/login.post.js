@@ -15,7 +15,7 @@ formData = {
 		pwd: {required: true, type: String, description: "用户密码"}
 	},
 	"social": {	// 第三方登陆 如果没有 系统登陆 system 对象 则必须传递 social 对象
-		"login_type": {required: true, type: String, description: "登陆方式"}; // enum: ["facebook", "google"];
+		"login_type": {required: true, type: String, description: "登陆方式"}; // enum: ["facebook", "google", "wx"];
 		"Client_accessToken": {required: true, type: String, description: "客户 facebook 的 accessToken"}
 	}
 }

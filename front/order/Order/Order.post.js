@@ -14,7 +14,7 @@ formData = {
 		}],
 		type_ship: {required: true, type: Number, description: "配送方式"},
 		ship_info: {
-			Cita: {type: ObjectId, ref: "Cita"},
+			Cita_code: {required: true, type: ObjectId, description: "运送城市的 code"},
 
 			firstname: String,
 			lastname: String,
