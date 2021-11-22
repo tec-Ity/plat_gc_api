@@ -12,6 +12,13 @@ general: {
 	Nation: {required: false, type: ObjectId, description: "产品所属国家"},
 	code: {required: false, type: String, description: "产品条形码, 可以为空, 如果填写 则公司唯一"},
 	desp: {required: false, type: String, description: "产品描述"},
+
+	price_regular: {required: false, type: Float, description: "产品标价"},
+	price_sale: {required: false, type: Float, description: "产品售价"},
+	force: {
+		price: {required: false, type: Boolean, description: "是否把价格同步到商品中的价格"},
+	},
+
 	unit: {required: false, type: String, description: "产品单位, 如: 瓶 个 箱 PZ"},
 	Brand: {required: false, type: ObjectId, description: "产品所属品牌"},
 	Categ: {required: false, type: ObjectId, description: "产品二级分类"},
@@ -19,7 +26,7 @@ general: {
 	is_usable: {required: false, type: Boolean, default: true, description: "产品邮编"},
 	sort: {required: false, type: Number, default: 0, description: "产品排序"},
 	// disable
-	img_urls: "查看 Pd_img 接口"
+	img_urls: "查看 Pd_img 接口",
 }
 put_img_url = {
     sort: {required: true, type: Number, description: "图片放置位置"},

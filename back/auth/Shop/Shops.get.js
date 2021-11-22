@@ -1,6 +1,6 @@
 api = "https://example.com/api/b1/Shops";
 query = "?"+["&[key in args]=[args[key]]"];
-/* 
+/*
     "EX_url": [
         api+"?search=N",
         api+"?search=N&page=2&sortKey=code&sortVal=1",
@@ -34,7 +34,6 @@ args = {
     serve_Citas: {required: false, type: Array[ObjectID], default: [], description: "根据所给城市, 查找出全部服务于此城市的店铺"},
     Citas: {required: false, type: Array[ObjectID], default: [], description: "根据所给城市, 查找出全部属于此城市的店铺"},
 	is_boutique: {required: false, type: Boolean, description: "是否为精品店"},
-
 
 	search: {required: false, type: String, description: "根据字符串匹配[code, nome]相匹配的店铺"},
 	excludes: {required: false, type: Array[ObjectID], default: [], description: "查找出去此数组中所有IDs之外的店铺", },

@@ -16,8 +16,7 @@ formData = {
 		ship_info: {
 			Cita_code: {required: true, type: ObjectId, description: "运送城市的 code"},
 
-			firstname: String,
-			lastname: String,
+			Client_nome: String,
 			company: String,
 			address: String,
 			city: String,
