@@ -22,7 +22,6 @@ general: {
 	unit: {required: false, type: String, description: "产品单位, 如: 瓶 个 箱 PZ"},
 	Brand: {required: false, type: ObjectId, description: "产品所属品牌"},
 	Categ: {required: false, type: ObjectId, description: "产品二级分类"},
-	price: {required: false, type: Float, default: 0, description: "商品同步产品时的默认价格, 可不填写"},
 	is_usable: {required: false, type: Boolean, default: true, description: "产品邮编"},
 	sort: {required: false, type: Number, default: 0, description: "产品排序"},
 	// disable
