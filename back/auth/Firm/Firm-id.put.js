@@ -12,11 +12,15 @@ general = {
 	resp: {required: false, type: String, description: "公司负责人"},
 	tel: {required: false, type: String, description: "公司电话"},
 	addr: {required: false, type: String, description: "公司地址"},
-}
+};
+mainShop = {
+	ShopId: {required: true, type: ObjectId, description: "想要设置主店的 _id"}
+};
 
 
 // 如果不添加本地图片 建议直接传数据 选择修改的类型
 formData = { general };
+formData = { mainShop };
 
 
 
