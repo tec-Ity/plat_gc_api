@@ -32,6 +32,9 @@ args = {
 	},
 
 	search: {required: false, type: String, description: "根据字符串匹配[code, nome]相匹配的订单"},
+	Shops: {required: false, type: Array[ObjectId], description: "根据店铺筛选订单"},
+	Clients: {required: false, type: Array[ObjectId], description: "根据客户筛选订单"},
+	Users: {required: false, type: Array[ObjectId], description: "根据公司成员筛选订单"},
 	excludes: {required: false, type: Array[ObjectID], default: null, description: "查找出去此数组中所有IDs之外的订单", },
 	includes: {required: false, type: Array[ObjectID], default: null, description: "查找包含所有此数组中所有IDs的订单", },
 
