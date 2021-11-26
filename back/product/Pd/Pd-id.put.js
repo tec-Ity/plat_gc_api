@@ -15,9 +15,6 @@ general: {
 
 	price_regular: {required: false, type: Float, description: "产品标价"},
 	price_sale: {required: false, type: Float, description: "产品售价"},
-	force: {
-		price: {required: false, type: Boolean, description: "是否把价格同步到商品中的价格"},
-	},
 
 	unit: {required: false, type: String, description: "产品单位, 如: 瓶 个 箱 PZ"},
 	Brand: {required: false, type: ObjectId, description: "产品所属品牌"},
@@ -26,6 +23,11 @@ general: {
 	sort: {required: false, type: Number, default: 0, description: "产品排序"},
 	// disable
 	img_urls: "查看 Pd_img 接口",
+
+	force: {
+		price: {required: false, type: Boolean, description: "是否把价格(price_regular, price_sale)同步到商品中的价格"},
+		is_usable: {required: false, type: Boolean, description: "是否把is_usable同步到商品中的价格"},
+	},
 }
 put_img_url = {
     sort: {required: true, type: Number, description: "图片放置位置"},

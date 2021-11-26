@@ -4,7 +4,7 @@ nome: String,								// 产品名称
 img_urls: [String], 						// imgs
 Brand: {type: ObjectId, ref: 'Brand'},
 Nation: {type: ObjectId, ref: 'Nation'},
-is_usable_Firm: { type: Boolean, default: true },	// 是否可用 禁用后 分部也会被禁用
+
 Categ: {type: ObjectId, ref: 'Categ'},
 
 /* 同步 可修改 */
@@ -19,7 +19,7 @@ langs: [{
 // Tags: [{type: ObjectId, ref: 'Tag'}],
 sort: Number,
 price_regular: Float,							// 默认价格 Product 一般同步此价格
-// (is_usable_Firm == 0) && (is_usable = 0); 
+
 is_usable: { type: Boolean, default: true },	// 只是不能被同步, 已经被同步的商品 不受此字段影响
 
 /* 只读 */

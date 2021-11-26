@@ -25,9 +25,6 @@ obj = {
     sort: {required: false, type: Number, default: 0, description: "产品排序"}
 }
 
-// 如果不添加本地图片 建议用这个
-formData = {obj};
-
 // 如果添加本地图片 只能用这个
 // 建议不要使用 fetch 因为其对文件传输不太友好
 formData = new formData();

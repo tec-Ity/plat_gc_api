@@ -1,7 +1,7 @@
 // 只有总公司管理员以上级别可以创建
 
 /* 注意: 必须要加上参数和本人的账号才可以删除 */
-api = "https://example.com/api/b1/Order/[:id]?force="+curUser.code;
+api = "https://example.com/api/b1/Order/[:id][?force=ture]";
 methods = "DELETE";
 headers = {
     'Accept': 'application/json',
