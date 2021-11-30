@@ -37,6 +37,7 @@ args = {
 	Users: {required: false, type: Array[ObjectId], description: "根据公司成员筛选订单"},
 	excludes: {required: false, type: Array[ObjectID], default: null, description: "查找出去此数组中所有IDs之外的订单", },
 	includes: {required: false, type: Array[ObjectID], default: null, description: "查找包含所有此数组中所有IDs的订单", },
+	Clients: {required: false, type: Array[ObjectID], default: null, description: "查找包含所有 Client id 的订单", },
 
 	status: {required: false, type: Array[Number], default: null, description: "查找包含所有此状态的订单", },
 	gte_price: {required: false, type: Float, description: "给出一个价格值, 搜索大于等于此值的订单"},
