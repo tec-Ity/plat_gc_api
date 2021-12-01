@@ -8,6 +8,7 @@ headers = {
 	"authorization": "auth"+" "+accessToken
 };
 Pd = {required: true, type: ObjectId, description: "商品所属产品"};
+Pds = [{required: true, type: ObjectId, description: "商品所属产品"}];
 
 obj = {
 	nome: {required: true, type: String, description: "商品名称"},
@@ -26,6 +27,7 @@ obj = {
 
 // 如果是从商店同步
 formData = {Pd};
+formData = {Pds};
 
 // 如果添加本地图片 只能用这个
 // 建议不要使用 fetch 因为其对文件传输不太友好

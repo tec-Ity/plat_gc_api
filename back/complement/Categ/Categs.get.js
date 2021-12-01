@@ -39,6 +39,7 @@ args = {
 
 	Categ_far: {required: false, type: ObjectID, description: "查找父类下的所有子分类"},
 	level: {required: false, type: Number, default: 1, description: "查找某个层级的分类"},
+    type: {required: false, type: Number, default: 1, description: "查找某个类型的分类"},
 
 	is_usable: {required: false, type: Boolean, description: "是否可用"},
 
