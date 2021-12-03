@@ -20,7 +20,7 @@ res = {
 	                "trimMsg": "电话号码前缀长度只能为: "
 	            }
 	        },
-	        "phone": {
+	        "phoneNum": {
 	            "regexp": "^[0-9]*$",
 	            "trim": 10,
 	            "errMsg": {

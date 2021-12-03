@@ -1,4 +1,5 @@
 phonePre: String, 
+phoneNum: String, 
 phone: String, 
 code: String,									// 用户账户
 pwd: String, 									// md5 加密

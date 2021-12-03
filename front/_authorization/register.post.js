@@ -8,8 +8,8 @@ formData = {
 
 	email: {required: false, type: String, description: "用户 激活的邮箱 "},		// 如果 email 为 true 则先判断 email 的验证;
 
-	phone: {required: false, type: String, description: "客户的 激活的电话 "},		// 如果 email 为 false 则需要传入 phone 和 phonePre
 	phonePre: {required: false, type: String, description: "客户的 phonePre "},
+	phoneNum: {required: false, type: String, description: "客户的 激活的电话 "},		// 如果 email 为 false 则需要传入 phone 和 phonePre
 }
 headers = null;
 
@@ -24,8 +24,9 @@ res = {
 		crClient: {
 			email: 'kelin@gmail.com',
 			is_active_email: true,
-			phonePre: '0039',
-			phone: '3888676756',
+			"phonePre": '+39',
+			"phoneNum": '3888676756',
+			"phone": "+393888676796",
 			is_active_phone: false,
 			is_active: true,
 			socials: [

@@ -12,7 +12,7 @@ general = {
 	code: {required: false, type: String, description: "用户编号, 系统唯一"},	// 管理者可以修改
 	nome: {required: false, type: String, description: "员工名称"},			// 管理者可以修改
 	phonePre: {required: false, type: String, description: "电话前缀"},		// 管理者可以修改
-	phone: {required: false, type: String, description: "员工电话"},			// 管理者可以修改
+	phoneNum: {required: false, type: String, description: "员工电话"},			// 管理者可以修改
 	is_usable: {required: false, type: Number, description: "员工是否可用"},	// 管理者可以修改
 	role: {required: false, type: Number, description: "员工的排序"},			// 管理者可以修改
 	sort: {required: false, type: Number, description: "员工的排序"},			// 管理者可以修改
@@ -43,8 +43,9 @@ res = {
             "is_usable": true,
             "_id": "60bdddf9477e752019dfe61b",
             "is_blacklist": 1,
-            "phonePre": "0039",
-            "phone": "3888676796",
+            "phonePre": '+39',
+            "phoneNum": '3888676756',
+            "phone": "+393888676796",
             "code": "TEST",
             "Firm": {
                 "_id": "60bcddc8dbbedb2669903384",

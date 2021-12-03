@@ -10,7 +10,9 @@ socials:[{											// 已绑定的社交账号
 }],
 
 email: String,										// opt 管理
-phone: String,										// opt 管理
+phonePre: String,										// opt 管理
+phoneNum: String,										// opt 管理
+phone: String,										// [只读 绝对]
 
 nome: String,
 

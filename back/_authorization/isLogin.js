@@ -15,8 +15,9 @@ res = {
 	message: "",
 	data: {
 		crUser: {							// 返回 当前使用 用户 前缀 cr: current
-			phonePre: '0039',
-			phone: '3888676756',
+			phonePre: '+39',
+			phoneNum: '3888676756',
+			phone: '+393888676756',
 			code: 'GCMANAGER',
 			nome: 'wang',
 			role: '1',

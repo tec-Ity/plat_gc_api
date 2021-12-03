@@ -18,8 +18,9 @@ res = {
 		crClient: {
 			email: 'kelin@gmail.com',
 			is_active_email: true,
-			phonePre: '0039',
-			phone: '3888676756',
+			"phonePre": '+39',
+			"phoneNum": '3888676756',
+			"phone": "+393888676796",
 			is_active_phone: false,
 			is_active: true,
 			socials: [

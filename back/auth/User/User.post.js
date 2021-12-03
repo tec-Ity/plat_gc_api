@@ -18,7 +18,7 @@ obj = {
 
     nome: {required: false, type: String, description: "员工名字"},
     phonePre: {required: false, type: String, description: "电话前缀"},
-    phone: {required: false, type: String, description: "员工电话"},
+    phoneNum: {required: false, type: String, description: "员工电话"},
 }
 
 
@@ -35,8 +35,9 @@ res = {
             "is_usable": true,
             "_id": "60bdddf9477e752019dfe61b",
             "is_blacklist": 1,
-            "phonePre": "0039",
-            "phone": "3888676796",
+            "phonePre": '+39',
+            "phoneNum": '3888676756',
+            "phone": "+393888676796",
             "code": "TEST",
             "Firm": {
                 "_id": "60bcddc8dbbedb2669903384",

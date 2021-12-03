@@ -10,8 +10,8 @@ formData = {
 
 	email: {required: false, type: String, description: "用户 激活的邮箱 "},		// 如果 email 为 true 则先判断 email 的验证;
 
-	phone: {required: false, type: String, description: "客户的 激活的电话 "},		// 如果 email 为 false 则需要传入 phone 和 phonePre
 	phonePre: {required: false, type: String, description: "客户的 phonePre "},
+	phoneNum: {required: false, type: String, description: "客户的 激活的电话 "},		// 如果 email 为 false 则需要传入 phone 和 phonePre
 }
 headers = {
 	'Accept': 'application/json',
@@ -32,7 +32,9 @@ res = {
 			"is_usable": true,
 			"sort": 0,
 			"_id": "60eee9d6ed93b12abf699992",
-			"phone": "+393888787897",
+			"phonePre": '+39',
+			"phoneNum": '3888676756',
+			"phone": "+393888676796",
 			"code": "21JUL0001",
 			"pwd": "$2a$10$ggelmzKL.PK.h7R1a9s//ea9yfcTCT/xVN4e6vSxXEul.ANTsKqkq",
 			"is_active": true,

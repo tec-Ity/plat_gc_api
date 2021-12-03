@@ -22,8 +22,9 @@ res = {
         "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6akpXVCJ9.eyJfaWQiOiI2MGJkZGRmOTQ3N2U3NTIwMTlkZmU2MWIiLCJGaXJtIjoiNjBiY2RkYzhkYmJlZGIyNjY5OTAzMzg0Iiwicm9sZSI6MSwiY29kZSI6IlRFU1QiLCJub21lIjoi5rWL6K-VIiwicGhvbmVQcmUiOiIwMDM5IiwicGhvbmUiOiIzODg4Njc2Nzk2IiwiaWF0IjoxNjI5MTkzMTU2LCJleHAiOjE2MzE3ODUxNTZ9.rNSDafFdIb3PFThgu_roLkoEpK-l4p_cRXWK1vKLF5s",
         "curUser": {
             "_id": "60bdddf9477e752019dfe61b",
-            "phonePre": "0039",
-            "phone": "3888676796",
+            "phonePre": '+39',
+            "phoneNum": '3888676756',
+            "phone": "+393888676796",
             "code": "TEST",
             "pwd": "$2a$10$eCekVz5vZ0Oysfvi5q9rQO2aQYwOI1T.qDcebeAvG74ssUgXiiigK",
             "Firm": "60bcddc8dbbedb2669903384",
