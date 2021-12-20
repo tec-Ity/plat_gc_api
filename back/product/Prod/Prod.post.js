@@ -11,13 +11,13 @@ Pd = {required: true, type: ObjectId, description: "商品所属产品"};
 Pds = [{required: true, type: ObjectId, description: "商品所属产品"}];
 
 obj = {
+	code: {required: true, type: String, description: "商品条形码, 可以为空, 如果填写 则公司唯一"},
 	nome: {required: true, type: String, description: "商品名称"},
-	Nation: {required: true, type: ObjectId, description: "商品所属国家"},
-	Brand: {required: true, type: ObjectId, description: "商品所属品牌"},
-	Categ: {required: true, type: ObjectId, description: "商品二级分类"},
-	price_regular: {required: false, type: Float, description: "产品标价"},
-	price_sale: {required: false, type: Float, description: "产品售价"},
-	code: {required: false, type: String, description: "商品条形码, 可以为空, 如果填写 则公司唯一"},
+	price_regular: {required: true, type: Float, description: "产品标价"},
+	price_sale: {required: true, type: Float, description: "产品售价"},
+	Nation: {required: false, type: ObjectId, description: "商品所属国家"},
+	Brand: {required: false, type: ObjectId, description: "商品所属品牌"},
+	Categ: {required: false, type: ObjectId, description: "商品二级分类"},
 	// img_urls: {required: false, type: Array[String], description: "商品图片"},	// 文件传输
 	desp: {required: false, type: String, description: "商品描述"},
 	unit: {required: false, type: String, description: "商品单位, 如: 瓶 个 箱 PZ"},
